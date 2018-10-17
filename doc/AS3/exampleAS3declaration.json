@@ -1,0 +1,131 @@
+{
+	"class": "AS3",
+	"action": "deploy",
+	"persist": true,
+	"declaration": {
+		"class": "ADC",
+		"schemaVersion": "3.0.0",
+		"id": "cfy_01",
+		"label": "Sample 1",
+		"remark": "TCP, UDP, FastL4",
+		"Cloudify_01": {
+			"class": "Tenant",
+			"TcpApplications": {
+				"class": "Application",
+				"template": "tcp",
+				"serviceMain": {
+					"class": "Service_TCP",
+					"profileTCP": {
+						"use": "tcp_profile"
+					},
+					"virtualAddresses": [
+						"192.168.120.8"
+					],
+					"virtualPort": 0,
+					"pool": "tcp_pool"
+				},
+				"tcp_pool": {
+					"class": "Pool",
+					"monitors": [{
+						"use": "tcp_monitor"
+					}],
+					"members": [
+                        {
+                        	"enable": true,
+                            "servicePort": 80,
+                            "serverAddresses": [
+                                "192.0.1.10"
+                            ]
+                        },
+                        {
+                        	"enable": true,
+                            "servicePort": 80,
+                            "serverAddresses": [
+                                "192.0.1.11"
+                            ]
+                        }
+                    ]
+				},
+				"tcp_profile": {
+					"class": "TCP_Profile"
+				},
+				"tcp_monitor": {
+					"class": "Monitor",
+					"monitorType": "tcp",
+					"send": "",
+					"receive": "",
+					"adaptive": false
+				}
+			},
+			"UdpApplications": {
+				"class": "Application",
+				"template": "udp",
+				"serviceMain": {
+					"class": "Service_UDP",
+					"profileUDP": {
+						"use": "udp_profile"
+					},
+					"virtualAddresses": [
+						"192.168.120.8"
+					],
+					"virtualPort": 0,
+					"pool": "udp_pool"
+				},
+				"udp_pool": {
+					"class": "Pool",
+					"monitors": [{
+						"use": "udp_monitor"
+					}],
+					"members": [
+                        {
+                        	"enable": true,
+                            "servicePort": 53,
+                            "serverAddresses": [
+                                "192.0.1.10"
+                            ]
+                        },
+                        {
+                        	"enable": true,
+                            "servicePort": 53,
+                            "serverAddresses": [
+                                "192.0.1.11"
+                            ]
+                        }
+                    ]
+				},
+				"udp_profile": {
+					"class": "UDP_Profile"
+				},
+				"udp_monitor": {
+					"class": "Monitor",
+					"monitorType": "udp",
+					"send": "",
+					"receive": "",
+					"adaptive": false
+				}
+			},
+			"FastL4Applications": {
+				"class": "Application",
+				"template": "l4",
+				"serviceMain": {
+					"class": "Service_L4",
+					"translateServerAddress": false,
+					"translateServerPort": false,
+					"profileL4": {
+						"use": "L4_Profile"
+					},
+					"virtualAddresses": [
+						"0.0.0.0"
+					],
+					"virtualPort": 0
+				},
+				"L4_Profile": {
+					"class": "L4_Profile",
+					"looseClose": true,
+					"looseInitialization": true,
+					"resetOnTimeout": false
+				}
+			}
+		}
+	}
+}

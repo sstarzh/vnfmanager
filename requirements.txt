@@ -1,0 +1,5 @@
+sphinx>=1.7
+f5-sphinx-theme>=1.0.2
+recommonmark
+sphinxjp.themes.basicstrap
+cloud_sptheme
