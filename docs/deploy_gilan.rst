@@ -92,12 +92,6 @@ Step 3. Add static route to Openstack router
     `10.1.51.0/24` Next Hop `<DAG layer BIG-IP pgw_net IP>`
 
     .. image:: images/static.png
-    
-
-.. code-block:: console
-
-    10.1.51.
-
 
 
 .. |source_deploy| raw:: html
