@@ -3,6 +3,7 @@ Part II. Deploy local F5 Gilan blueprint and create traffic server VM
 
 1. :ref:`Deploy Gilan blueprint <gilan>`
 2. :ref:`Stand up traffic server VM <servervm>`
+3. :ref:`Add static route <statroute>`
 
 
 .. _gilan:
@@ -76,6 +77,23 @@ Component                                                    Description
 ============================================================ ======================================================================================================================================================================================================================================================================
 
 2.	For all other Instance component definitions, use the default values provided by OpenStack. For details, see |OSLnchIn_deploy|.
+
+
+.. _statroute:
+
+Step 3. Add static route to Openstack router
+--------------------------------------------
+
+1. Determine Server VM IP 
+
+2. Select :guilabel:`Network` --> :guilabel:`Router` and click on :guilabel:`router1`
+    Open :guilabel:`Routes` tab and click on :guilabel:`Add route`
+    Add the following route: 
+
+.. code-block:: console
+
+    10.1.51.
+
 
 
 .. |source_deploy| raw:: html
