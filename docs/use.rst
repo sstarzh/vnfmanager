@@ -1,4 +1,4 @@
-Part III. Run  workflows
+Part III. Run workflows
 ========================
 
 Workflows are automation process algorithms. They describe the flow of the automation by determining the tasks to run

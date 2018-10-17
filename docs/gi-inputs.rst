@@ -48,6 +48,24 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
   vnf_check_interval_for_sysGlobalTmmStatTmUsageRatio1m: "1"
   dag_check_interval_for_sysGlobalTmmStatTmUsageRatio1m: "1"
 
+  # New since 0.2.24.0
+  vnf_group_throughput_threshold: "75"
+  vnf_group_throughput: "10"
+  vnf_layer_cpu_threshold: "75"
+  dag_group_cpu_threshold: "75"
+  vnf_layer_cpu_threshold_check_interval: "1"
+  vnf_group_throughput_check_interval: "1"
+  dag_group_cpu_threshold_check_interval: "1"
+  min_scale_dag_group: "2"
+  min_scale_vnf_layer: "1"
+  max_scale_dag_group: "1000"
+  max_scale_vnf_layer: "31"
+  min_scale_vnf_group: "1"
+  max_scale_vnf_group: "1000"
+  max_heal_vnf_layer: "5"
+  max_heal_vnfd_dag_ve: "5"
+  max_heal_vnf_slave_ve: "5"
+
   # Common inputs
   cm_ip: <changeMe>
   sw_ref_dag:
