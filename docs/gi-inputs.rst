@@ -144,7 +144,8 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
             layer4: any
             profileL4:
               use: /f5vnf/Shared/profileL4
-            snat: none
+            snat: auto
+            lastHop: disable
             translateServerAddress: False
             translateServerPort: False
             virtualAddresses:
@@ -165,7 +166,8 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
             virtualPort: 0
             translateServerAddress: False
             translateServerPort: False
-            snat: none
+            snat: auto
+            lastHop: disable
             iRules:
               - /f5vnf/Shared/lbSelectedRule
         firewall_inbound:
