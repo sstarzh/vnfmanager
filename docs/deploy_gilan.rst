@@ -89,7 +89,7 @@ Step 3. Add static route to Openstack router
 2. Select :guilabel:`Network` --> :guilabel:`Routers` and click on :guilabel:`router1`
     Open :guilabel:`Static Routes` tab and click on :guilabel:`Add Static Route`
     Add the following route: 
-    `10.1.51.0/24` Next Hop `<DAG layer BIG-IP pgw_net IP>`
+    `10.1.52.0/24` Next Hop `<DAG layer BIG-IP pgw_net IP>`
 
     .. image:: images/static.png
 
