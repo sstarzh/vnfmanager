@@ -15,7 +15,17 @@ F5 Virtual Network Function Manager (VNFM)
    setup.rst
    deploy.rst
    deploy_gilan.rst
-   use.rst
+   auto_scaleout.rst
+   man_scaleout.rst
+   conf_change.rst
+   uninstall.rst
+
+
+.. toctree::
+   :caption: References
+   :glob:
+   :maxdepth: 2
+
    CM-install-wf.rst
    CM-scale-wf.rst
    CM-heal-wf.rst
