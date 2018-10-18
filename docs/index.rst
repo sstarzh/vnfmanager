@@ -22,7 +22,7 @@ F5 Virtual Network Function Manager (VNFM)
 
 
 .. toctree::
-   :caption: References
+   :caption: Reference documents
    :glob:
    :maxdepth: 2
 
