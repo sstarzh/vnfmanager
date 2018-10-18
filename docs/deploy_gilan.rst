@@ -67,7 +67,7 @@ Component                                                    Description
 
 |networks_deploy|                                            Select :guilabel:`+` next to the following predefined network (and subnet), to add to the :guilabel:`Allocated` list:
 
-                                                             -  :guilabel:`PDN Network (pdn_net)` – Traffic Server will only communicate with BIG-IP DAG instance.
+                                                             -  :guilabel:`PDN DAG Network (pdn_dag_net)` – Traffic Server will only communicate with BIG-IP FW instance.
 
 |sg_deploy|                                                  Select :guilabel:`+` next to the following, predefined security group to add to the :guilabel:`Allocated` list:
 

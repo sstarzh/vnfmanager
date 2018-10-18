@@ -56,7 +56,7 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
   vnf_layer_cpu_threshold_check_interval: "1"
   vnf_group_throughput_check_interval: "1"
   dag_group_cpu_threshold_check_interval: "1"
-  min_scale_dag_group: "1"
+  min_scale_dag_group: "2"
   max_scale_dag_group: "1000"
   min_scale_vnf_layer: "1"
   max_scale_vnf_layer: "31"
