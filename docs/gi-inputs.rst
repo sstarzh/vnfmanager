@@ -51,7 +51,7 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
   # New since 0.2.24.0
   vnf_group_throughput_threshold: "75"
   vnf_group_throughput: "10"
-  vnf_layer_cpu_threshold: "75"
+  vnf_layer_cpu_threshold: "20"
   dag_group_cpu_threshold: "75"
   vnf_layer_cpu_threshold_check_interval: "1"
   vnf_group_throughput_check_interval: "1"
