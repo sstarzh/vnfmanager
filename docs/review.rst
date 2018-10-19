@@ -45,15 +45,18 @@ Start UDF environment
 ---------------------
 
 1. **Deploy "VNF manager OS newton FINAL" blueprint and start it Southwest(Arizona) Ravello region**
-.. image:: images/bp.png
+    
+    .. image:: images/bp.png
 
 
 2. **Wait until all components are in "Running" state. BIG-IQ usually boots last**
-.. image:: images/running.png
+    
+    .. image:: images/running.png
 
 
 3. **Login to BIG-IQ TMUI and ensure "regkeys" licenses are present and unexpired**
-.. image:: images/lic.png
+    
+    .. image:: images/lic.png
 
 
 .. warning:: 
@@ -61,15 +64,18 @@ Start UDF environment
 
 
 4. **xRDP to jumphost and run "run_this_first.sh" script**
-.. note:: When prompted, choose to run the script in Terminal 
-.. image:: images/script.png
+    
+    .. note:: When prompted, choose to run the script in Terminal 
+    
+    .. image:: images/script.png
 
 
 .. note:: Script performs the following: 
     Creates extnet Openstack network and Router with corresponding interfaces; starts rabbitmq-server on controller node; forces Nova service to register compute nodes with new hostnames and creates necessary routes on jumphost and BIG-IQ VMs
 
 5. **Point Firefox browser to Openstack Horizon Dashboard at `http://10.1.20.4/`**
-.. image:: images/controller.png
+
+    .. image:: images/controller.png
 
 
 6. **Login with f5admin user**
