@@ -13,16 +13,16 @@ In order to successfully use VNF manager lab you will need to run the specified 
 
 .. _setup:
 
-1. Blueprint setup
-------------------
+Step 1. Blueprint setup
+-----------------------
 
 .. image:: images/udf_bp.png
 
 
 .. _credentials:
 
-2. Credentials
---------------
+Step 2. Credentials
+-------------------
 
 =============================================== =====================================================
 Blueprint component                             username/password
@@ -41,8 +41,8 @@ keystone                                        f5admin/f5admin
 
 .. _start:
 
-3. Start UDF environment
-------------------------
+Step 3. Start UDF environment
+-----------------------------
 
 - **Deploy "VNF manager OS newton FINAL" blueprint and start it Southwest(Arizona) Ravello region**
 .. image:: images/bp.png
@@ -76,8 +76,8 @@ keystone                                        f5admin/f5admin
 
 .. _review:
 
-4. Review Openstack configuration
----------------------------------
+Step 4. Review Openstack configuration
+--------------------------------------
 
 The private cloud environment (for example, OpenStack) must have the following administrative components defined PRIOR to deploying F5 VNFM.
 (Click the following links to learn more about using the latest version of OpenStack, or refer to the documentation specific to the version you are using.)
@@ -118,8 +118,8 @@ Component                                                    Description
 
 .. _route:
 
-5. Verify BIG-IQ route
-----------------------
+Step 5. Verify BIG-IQ route
+---------------------------
 
 SSH to BIG-IQ and confirm that route to 10.1.40.0/24 network is present and network is reachable. Gateway IP is unique for each deployment and depends on Openstack Router interface extnet IP
 
