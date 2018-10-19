@@ -100,7 +100,7 @@ Step 3. Add static route to Openstack router
 Step 4. Run test traffic to validate connectivity
 -------------------------------------------------
 
-1. SSH to `traffic_gen` VM and run Apache Bench command
+1. SSH to UDF `traffic_gen` VM and run Apache Bench command
 
     .. code-block:: console
 
@@ -138,4 +138,4 @@ Step 4. Run test traffic to validate connectivity
 
 What’s Next?
 
-:doc:`Run Workflows <use>`
+:doc:`Trigger Auto-scaleout <auto_scaleout>`
