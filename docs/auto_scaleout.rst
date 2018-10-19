@@ -21,7 +21,7 @@ Step 1. Run Apache Bench from traffic_gen VM
 
 .. _watch:
 
-Step 1. Watch BIG-IP statistics and scaleout process in VNF manager
+Step 2. Watch BIG-IP statistics and scaleout process in VNF manager
 -------------------------------------------------------------------
 
 1. Point jumphost browser to .40 IP of FW BIG-IP (master) and login as `admin`
