@@ -4,7 +4,7 @@ Part II. Deploy local F5 Gilan blueprint and create traffic server VM
 1. :ref:`Deploy Gilan blueprint <gilan>`
 2. :ref:`Stand up traffic server VM <servervm>`
 3. :ref:`Add static route <statroute>`
-3. :ref:`Run test traffic <test>`
+4. :ref:`Run test traffic <test>`
 
 .. _gilan:
 
