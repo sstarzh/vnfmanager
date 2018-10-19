@@ -44,7 +44,7 @@ keystone                                        f5admin/f5admin
 Start UDF environment
 ---------------------
 
-1. **Deploy "VNF manager OS newton FINAL" blueprint and start it Southwest(Arizona) Ravello region**
+1. **Deploy "Packaged NFV Solutions" blueprint and start it Southwest(Arizona) or East(Virginia) Ravello region**
     
     .. image:: images/bp.png
 
