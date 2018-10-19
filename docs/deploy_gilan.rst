@@ -4,7 +4,7 @@ Part II. Deploy local F5 Gilan blueprint and create traffic server VM
 1. :ref:`Deploy Gilan blueprint <gilan>`
 2. :ref:`Stand up traffic server VM <servervm>`
 3. :ref:`Add static route <statroute>`
-
+3. :ref:`Run test traffic <test>`
 
 .. _gilan:
 
@@ -92,6 +92,23 @@ Step 3. Add static route to Openstack router
     `<Server VM IP>/32` Next Hop `<DAG layer BIG-IP pgw_net IP>`
 
     .. image:: images/static.png
+
+
+
+.. _test:
+
+Step 4. Run test traffic to validate connectivity
+-------------------------------------------------
+
+1. SSH to `traffic_gen` VM and run Apache Bench command
+
+    .. code-block:: console
+
+        sudo ab -n 10 -c 1 -b 1400 -B eth1 http://<Server IP>/
+
+2. Output should contain statisticcal information on average RTT and # of bytes sent/received, among other data. Ensure Apache Bench received data back from the server.
+
+    .. image:: images/ab_output.png
 
 
 .. |source_deploy| raw:: html
