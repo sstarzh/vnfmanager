@@ -13,16 +13,16 @@ In order to successfully use VNF manager lab you will need to run the specified 
 
 .. _setup:
 
-Step 1. Blueprint setup
------------------------
+Blueprint setup
+---------------
 
 .. image:: images/udf_bp.png
 
 
 .. _credentials:
 
-Step 2. Credentials
--------------------
+Credentials
+-----------
 
 =============================================== =====================================================
 Blueprint component                             username/password
@@ -41,25 +41,26 @@ keystone                                        f5admin/f5admin
 
 .. _start:
 
-Step 3. Start UDF environment
------------------------------
+Start UDF environment
+---------------------
 
-- **Deploy "VNF manager OS newton FINAL" blueprint and start it Southwest(Arizona) Ravello region**
+1. **Deploy "VNF manager OS newton FINAL" blueprint and start it Southwest(Arizona) Ravello region**
 .. image:: images/bp.png
 
 
-- **Wait until all components are in "Running" state. BIG-IQ usually boots last**
+2. **Wait until all components are in "Running" state. BIG-IQ usually boots last**
 .. image:: images/running.png
 
 
-- **Login to BIG-IQ TMUI and ensure "regkeys" licenses are present and unexpired**
+3. **Login to BIG-IQ TMUI and ensure "regkeys" licenses are present and unexpired**
 .. image:: images/lic.png
 
 
-.. warning:: Wait at least 5 minutes to allow Openstack Services to come up before running the script
+.. warning:: 
+    Wait at least 5 minutes to allow Openstack Services to come up before running the script
 
 
-- **xRDP to jumphost and run "run_this_first.sh" script**
+4. **xRDP to jumphost and run "run_this_first.sh" script**
 .. note:: When prompted, choose to run the script in Terminal 
 .. image:: images/script.png
 
@@ -67,17 +68,17 @@ Step 3. Start UDF environment
 .. note:: Script performs the following: 
     Creates extnet Openstack network and Router with corresponding interfaces; starts rabbitmq-server on controller node; forces Nova service to register compute nodes with new hostnames and creates necessary routes on jumphost and BIG-IQ VMs
 
-- **Point Firefox browser to Openstack Horizon Dashboard at `http://10.1.20.4/`**
+5. **Point Firefox browser to Openstack Horizon Dashboard at `http://10.1.20.4/`**
 .. image:: images/controller.png
 
 
-- **Login with f5admin user**
+6. **Login with f5admin user**
 
 
 .. _review:
 
-Step 4. Review Openstack configuration
---------------------------------------
+Review Openstack configuration
+------------------------------
 
 The private cloud environment (for example, OpenStack) must have the following administrative components defined PRIOR to deploying F5 VNFM.
 (Click the following links to learn more about using the latest version of OpenStack, or refer to the documentation specific to the version you are using.)
@@ -118,8 +119,8 @@ Component                                                    Description
 
 .. _route:
 
-Step 5. Verify BIG-IQ route
----------------------------
+Verify BIG-IQ route
+-------------------
 
 SSH to BIG-IQ and confirm that route to 10.1.40.0/24 network is present and network is reachable. Gateway IP is unique for each deployment and depends on Openstack Router interface extnet IP
 
