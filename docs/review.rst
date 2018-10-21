@@ -71,7 +71,7 @@ Start UDF environment
 
 
 .. note:: Script performs the following: 
-    Creates extnet Openstack network and Router with corresponding interfaces; starts rabbitmq-server on controller node; forces Nova service to register compute nodes with new hostnames and creates necessary routes on jumphost and BIG-IQ VMs
+    Creates extnet Openstack network and 2 Routers with corresponding interfaces; starts rabbitmq-server on controller node; forces Nova service to register compute nodes with new hostnames and creates necessary routes on jumphost and BIG-IQ VMs
 
 5. **Point Firefox browser to Openstack Horizon Dashboard at `http://10.1.20.4/`**
 
@@ -120,6 +120,8 @@ Component                                                    Description
                                                              -  Provider gateway security group (pgw_sg) – Configure as needed for your envronment.
 
 |keyPr_setup| (Project->Access and Security)                 Defined key pairs for accessing VNFM instance remotely, using SSH.
+
+|router_setup| (Project->Network->Routers)                   Created 2 routers with interfaces into VxLANs (router1 is connected to extnet)
 ============================================================ =============================================================================================================================================================================
 
 
@@ -168,3 +170,7 @@ What's Next?
 .. |keyPr_setup| raw:: html
 
     <a href="https://docs.openstack.org/horizon/rocky/user/configure-access-and-security-for-instances.html#keypair-add" target="_blank">Key Pair</a>
+
+.. |router_setup| raw:: html
+
+    <a href="https://docs.openstack.org/horizon/rocky/user/create-networks.html" target="_blank">Router</a>
