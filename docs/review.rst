@@ -100,7 +100,7 @@ Component                                                    Description
                                                              -  RAM: 8GB
                                                              -  Root disk: 160GB
 
-|networks_setup|                                             Define the following networks and one subnet for each, defined with sufficient IP address space in each network:
+|networks_setup| (Project->Network)                          Define the following networks and one subnet for each, defined with sufficient IP address space in each network:
                                                              For example, a 5Gb or 10Gb network requires a minimum of [insert #] IP addresses for each subnet.
 
                                                              -  Management network (mgmt) – Configure the VNF Manager and BIG-IP VE management interfaces on this network, specifying at least one DNS server in the subnet configuration.
@@ -111,7 +111,7 @@ Component                                                    Description
                                                              -  Control network (control_net) – Network fused or communication with control and value-added services.
                                                              -  HA network (ha_net) – Network used for internal HA communication between clustered VNF BIG-IP VE instances.
 
-|secGrps_setup|                                              The following security groups created:
+|secGrps_setup| (Project->Access and Security)               The following security groups created:
 
                                                              -  SNMP security group (snmp_sg) – Allow UDP ports 161/162.
                                                              -  Control security group (control_sg) – Configure as needed for your envronment.
@@ -119,7 +119,7 @@ Component                                                    Description
                                                              -  Provider data network security group (pdn_sg) – Configure as needed for your envronment.
                                                              -  Provider gateway security group (pgw_sg) – Configure as needed for your envronment.
 
-|keyPr_setup|                                                Defined key pairs for accessing VNFM instance remotely, using SSH.
+|keyPr_setup| (Project->Access and Security)                 Defined key pairs for accessing VNFM instance remotely, using SSH.
 ============================================================ =============================================================================================================================================================================
 
 
