@@ -9,10 +9,10 @@ This step will force VNF Manager to remove all BIG-IP and Nagios VMs and corresp
 To change the AFM configuration, select :guilabel:`Deployments` --> :guilabel:`F5-VNF-Service-Layer_v0.2.24.2-devel` Blueprint 
 Expand |menuIcon_deploy|, click :guilabel:`Gilan uninstall` and then click :guilabel:`Execute`.
 
-
+.. image:: images/gilan_uninstall.png
 
 .. |menuIcon_deploy| image:: images/menuIcon.png
 
 
 For more information about Install Workflow see:
-:doc:`Install Workflow <CM-uninstall-wf>`
+:doc:`Uninstall Workflow <CM-uninstall-wf>`
