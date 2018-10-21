@@ -54,7 +54,7 @@ Step 2. Stand up traffic server VM
 
 1.  |srvInst_deploy|, and then define the following parameters, clicking :guilabel:`Next` to complete the wizard.
 
-:menuselection:`Compute -> Instance`
+:menuselection:`Project -> Compute -> Instance`
 
 ============================================================ ======================================================================================================================================================================================================================================================================
 Component                                                    Description

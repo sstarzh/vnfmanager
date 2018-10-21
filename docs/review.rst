@@ -94,7 +94,7 @@ The private cloud environment (for example, OpenStack) must have the following a
 ============================================================ =============================================================================================================================================================================
 Component                                                    Description
 ============================================================ =============================================================================================================================================================================
-|flavors_setup|                                              Define flavors sized to accommodate the VNFM component images you previously uploaded. The minimum flavor requirements for deploying the F5 VNF Manager include:
+Admin->|flavors_setup|                                       Define flavors sized to accommodate the VNFM component images you previously uploaded. The minimum flavor requirements for deploying the F5 VNF Manager include:
 
                                                              -  vCPU: 4
                                                              -  RAM: 8GB
