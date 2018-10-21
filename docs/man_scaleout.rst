@@ -42,7 +42,7 @@ Step 3. Run test traffic
 
 1. SSH to `traffic_gen` VM and run `run_traffic.sh` sript passing Server IP as an argument:
 
-.. code_block::console
+.. code_block:: console
 
     ./run_traffic.sh 10.1.52.X
 
