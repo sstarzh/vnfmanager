@@ -14,13 +14,13 @@ Step 1. Deploy Gilan blueprint
 Once you change all the values in the Gi LAN inputs file and save it locally, upload the file in F5 VNF Manager. It will
 define all required parameters for the F5 Gilan yaml blueprint.
 
-1.	Open F5 VNFM, click :guilabel:`Local Blueprints`. The :guilabel:`gilan.yaml` main blueprint file appears.
+1.	Open F5 VNFM, click :guilabel:`Local Blueprints`. The :guilabel:`F5-VNF-Service-Layer_v0.2.24.2-devel` main blueprint file appears.
 
 2.  Click :guilabel:`Deploy`.
 
-3.	Enter a name, under :guilabel:`Deployment Inputs`, click |clip_deploy| browse for the :guilabel:`gi_inputs.yaml` file you edited, and then click :guilabel:`Open`. The Deploy blueprint form is completed automatically with the values you entered in the gilan_inputs.yaml file.
+3.	Enter a name, under :guilabel:`Deployment Inputs`, click |clip_deploy| browse for the :guilabel:`gi_inputs.yaml` file you edited, and then click :guilabel:`Open`. The Deploy blueprint form is completed automatically with the values you entered in the gilan_inputs.yaml file. Click :guilabel:`Deploy`
 
-4.	Click :guilabel:`Deploy`, on the left-side menu click the :guilabel:`Deployments` blade, in the list next to blueprint you created in the preivous step, expand |menuIcon_deploy|, click :guilabel:`Gilan install`, and then click :guilabel:`Execute`. VNFM starts creating BIG-IP VEs according to the parameters you defined for your network. Also installed includes additional, sub-blueprints packaged with the F5 gilan blueprint.
+4.  On the left-side menu click the :guilabel:`Deployments` blade, in the list next to blueprint you created in the preivous step, expand |menuIcon_deploy|, click :guilabel:`Gilan install`, and then click :guilabel:`Execute`. VNFM starts creating BIG-IP VEs according to the parameters you defined for your network. Also installed includes additional, sub-blueprints packaged with the F5 gilan blueprint.
 
 .. image:: images/gilan_install.png
 
@@ -41,6 +41,10 @@ define all required parameters for the F5 Gilan yaml blueprint.
 .. image:: images/wf_complete.png
 
 .. |clip_deploy| image:: images/clip.png
+
+
+For more information about Install Workflow see:
+:doc:`Install Workflow <CM-install-wf>`
 
 
 .. _servervm:

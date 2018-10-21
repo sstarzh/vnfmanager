@@ -2,6 +2,16 @@ Part V. Configuration change
 ============================
 
 
+VNF Manager allows users to perform BIG-IP configuration change by invoking `nsd_xxx` Workflow and passing corresponding AS3 payload.
+This lab contains a modified AS3 payload that will provision AFM policy and rules for Firewall layer of Gilan blueprint.
+
+To change the AFM configuration, select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
+Expand |menuIcon_deploy|, click :guilabel:`Gilan install`, paste the entire AS3 payload and then click :guilabel:`Execute`.
+
+.. |menuIcon_deploy| image:: images/menuIcon.png
+
+.. image:: images/as3_update.png
+
 Use the YAML AS3 payload below to provision Firewall rules
 
 .. code-block:: yaml
