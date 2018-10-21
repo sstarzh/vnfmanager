@@ -24,11 +24,19 @@ Step 1. Run Apache Bench from traffic_gen VM
 Step 2. Watch BIG-IP statistics and scaleout process in VNF manager
 -------------------------------------------------------------------
 
-1. Point jumphost browser to .40 IP of FW BIG-IP (master) and login as `admin`
-2. 
 
+1. Point Jumphost Browser to a `master` VNF(FW) BIG-IP instance .40 IP address and login to BIG-IP TMUI
+    a. Navigate to :guilabel:`Statistics` --> :guilabel:`Analytics` --> :guilabel:`CPU`
+    b. Watch CPU graph as it crosses 15% CPU threshold
+2. Point your browser to the public floating `10.1.20.x` IP address of VNF Manager VM
+    a. Login to VNF manager UI and click on :guilabel:`Deployments` from the left-side menuIcon
+    b. Watch as VNF manager performs auto scale-out of VNF(FW) instances
+3. SSH to Nagios VM from jumphost using jumphost.pem key and watch nagios log file:
 
-
+    .. code_block:: console
+    ssh -i ~/Downloads/jumphost.pem centos@10.1.20.XXX
+    sudo -i
+    less /var/log/nagios/nagios.log
 
 
 .. |menuIcon_use| image:: images/menuIcon.png
