@@ -50,7 +50,7 @@ Step 3. Run test traffic
 3. Navigate to :guilabel:`Local Traffic` --> :guilabel:`Virtual Servers`, then select `f5vnf` partition from :guilabel:`Partition:` menu
 4. Select `firewall_fastL4` VS and click on :guilabel:`Statistics` menu
 
-    Traffic statistics will be visible in `Traffic Details` and `Connections` parts of Statistics screen. Note that due to the asymmetric routing return traffic is NOT passing DAG instances!
+    Traffic statistics will be visible in `Traffic Details` and `Connections` parts of Statistics screen. Note that due to the asymmetric routing return traffic is NOT passing through DAG instances!
 
 
 .. image:: images/module_stats.png
@@ -61,3 +61,8 @@ Step 3. Run test traffic
 
 For more information about Scale Workflow see:
 :doc:`The Scale Workflow <CM-scale-wf>`
+
+
+What’s Next?
+
+:doc:`Change AFM Configuration via AS3 <conf_change>`

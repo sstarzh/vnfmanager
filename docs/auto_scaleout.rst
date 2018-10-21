@@ -32,3 +32,9 @@ Step 2. Watch BIG-IP statistics and scaleout process in VNF manager
 
 
 .. |menuIcon_use| image:: images/menuIcon.png
+
+
+
+What’s Next?
+
+:doc:`Initiate Manual scaleout <man_scaleout>`
