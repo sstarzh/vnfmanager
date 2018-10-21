@@ -14,5 +14,5 @@ Expand |menuIcon_deploy|, click :guilabel:`Gilan uninstall` and then click :guil
 .. |menuIcon_deploy| image:: images/menuIcon.png
 
 
-For more information about Install Workflow see:
+For more information about Uninstall Workflow see:
 :doc:`Uninstall Workflow <CM-uninstall-wf>`
