@@ -22,7 +22,7 @@ Expand |menuIcon_deploy|, click :guilabel:`Gilan scale out group`. Keep `add_ins
 
 .. _newdag:
 
-Step 1. Modify openstack route
+Step 2. Modify openstack route
 ------------------------------
 
 1. Note newly created DAG layer BIG-IP `pgw_net`  
@@ -37,7 +37,7 @@ Step 1. Modify openstack route
 
 .. _test_dag:
 
-Step 1. Run test traffic
+Step 3. Run test traffic
 ------------------------
 
 
