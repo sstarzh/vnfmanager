@@ -12,7 +12,12 @@ Expand |menuIcon_deploy|, click :guilabel:`Gilan install`, paste the entire AS3 
 
 .. image:: images/as3_update.png
 
-Use the YAML AS3 payload below to provision Firewall rules
+
+For more information about Install Workflow see:
+:doc:`Update FW layer configuration Workflow <CM-AS3-update>`
+
+
+AS3 payload for configuration of Firewall rules
 
 .. code-block:: yaml
 
