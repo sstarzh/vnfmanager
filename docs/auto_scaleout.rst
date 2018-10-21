@@ -33,7 +33,7 @@ Step 2. Watch BIG-IP statistics and scaleout process in VNF manager
     b. Watch as VNF manager performs auto scale-out of VNF(FW) instances
 3. SSH to Nagios VM from jumphost using jumphost.pem key and watch nagios log file:
 
-    .. code_block:: console
+    .. code-block:: console
     ssh -i ~/Downloads/jumphost.pem centos@10.1.20.XXX
     sudo -i
     less /var/log/nagios/nagios.log
