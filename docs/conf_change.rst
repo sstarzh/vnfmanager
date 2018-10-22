@@ -158,7 +158,7 @@ AS3 payload for configuration of Firewall rules
                     template: generic
                 serviceMain:
                     allowVlans:
-                        - bigip: /Common/vnfs
+                        - bigip: /Common/pgw_dag_net
                     class: Service_Generic
                     iRules:
                         - /f5vnf/Shared/lbSelectedRule
@@ -183,7 +183,7 @@ AS3 payload for configuration of Firewall rules
                     class: Service_L4
                     layer4: tcp
                     allowVlans:
-                        - bigip: /Common/vnf
+                        - bigip: /Common/pgw_dag_net
                     profileL4:
                         use: /f5vnf/Shared/profileL4
                     virtualAddresses:
@@ -204,7 +204,7 @@ AS3 payload for configuration of Firewall rules
               template: generic
               serviceMain:
                 allowVlans:
-                - bigip: /Common/vnfe
+                - bigip: /Common/pdn_dag_net
                 class: Service_Generic
                 iRules:
                 - /f5vnf/Shared/lbSelectedRule
