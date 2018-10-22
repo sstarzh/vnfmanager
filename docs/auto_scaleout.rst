@@ -1,5 +1,5 @@
-Part III. Trigger auto scale-out
-================================
+Part IV. Trigger auto scale-out
+===============================
 
 1. :ref:`Run Apache Bench <traffic_run>`
 2. :ref:`Watch BIG-IP statistics and VNF manager actions <watch>`

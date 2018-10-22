@@ -1,5 +1,5 @@
-Part I: Deploy F5 VNF Manager
-=============================
+Part II: Deploy F5 VNF Manager
+==============================
 
 To deploy F5 VNFM, do the following:
 

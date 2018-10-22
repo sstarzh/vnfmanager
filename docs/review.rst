@@ -1,5 +1,5 @@
-Review and prepare UDF Openstack environment
-============================================
+Part I. Review and prepare UDF Openstack environment
+====================================================
 
 UDF blueprint for VNF manager lab has been created with Openstack Newton ( community equivalent of RH OSP 10). Due to UDF specifics, parts of networking config need to be re-created for each deployment.
 In order to successfully use VNF manager lab you will need to run the specified script and review network configuration inside the Openstack

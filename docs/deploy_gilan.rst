@@ -1,5 +1,5 @@
-Part II. Deploy local F5 Gilan blueprint and create traffic server VM
-=====================================================================
+Part III. Deploy local F5 Gilan blueprint and create traffic server VM
+======================================================================
 
 1. :ref:`Deploy Gilan blueprint <gilan>`
 2. :ref:`Stand up traffic server VM <servervm>`

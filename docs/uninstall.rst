@@ -1,5 +1,5 @@
-Part VI. (Optional) Uninstall workflow
-======================================
+Part VII. (Optional) Uninstall workflow
+=======================================
 
 This step will force VNF Manager to remove all BIG-IP and Nagios VMs and corresponding configuration. 
 

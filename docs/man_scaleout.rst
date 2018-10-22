@@ -1,5 +1,5 @@
-Part IV. Initiate manual scale-out
-==================================
+Part V. Initiate manual scale-out
+=================================
 
 1. :ref:`Execute scale-out workflow <scaleout>`
 2. :ref:`Modify Openstack route to new DAG instance <newdag>`

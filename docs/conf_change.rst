@@ -1,5 +1,5 @@
-Part V. Configuration change
-============================
+Part VI. Configuration change
+=============================
 
 
 VNF Manager allows users to perform BIG-IP configuration change by invoking `nsd_xxx` Workflow and passing corresponding AS3 payload.
