@@ -38,7 +38,7 @@ define all required parameters for the F5 Gilan yaml blueprint.
 
 .. note:: Deployment will take 35-40 minutes to complete. Monitor the process by viewing :guilabel:`Deployments` screen until all nodes are **green**
 
-Resulting architecture includes 2 DAG and 3 ( master + 2 slaves) VNF instances:
+Resulting Gilan deployment architecture includes 2 DAG and 3 ( master + 2 slaves) VNF instances:
 
 .. image:: images/arch_depl.png
 
@@ -104,6 +104,15 @@ Step 3. Add static route to Openstack router
 3. Review target traffic flows
     
     .. image:: images/networking.png
+
+    Three-way TCP handshake flow:
+
+    .. image:: images/tcp_3_way.png
+
+    Apache Bench HTTP request flow:
+
+    .. image:: images/ab_flow.png
+    
 
 .. _test:
 
