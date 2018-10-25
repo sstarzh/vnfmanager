@@ -171,7 +171,7 @@ Step 4. Run test traffic to validate connectivity
 
 .. |conf| raw:: html
 
-    <a href="https://docs.openstack.org/horizon/latest/user/launch-instances.html" target="_blank">Select customization script</a>
+    <a href="https://docs.openstack.org/horizon/latest/user/launch-instances.html" target="_blank">Configuration</a>
 
 
 What’s Next?
