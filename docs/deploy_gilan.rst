@@ -93,7 +93,10 @@ Component                                                    Description
 
 |kp_deploy|                                                  Select existing `jumphost.pem` key pair for accessing VNFM instance remotely from jumphost, using SSH.
 
-|conf|                                                       Click `Load from file` button and select `~/Downloads/userdata.sh` script 
+|conf|                                                       Click `Browse...` button under `Load from file` and select `~/Downloads/userdata.sh` script. `Customization script` field will be populated with script contents.
+                                                            
+                                                             .. image:: images/userscript.png
+
 ============================================================ ======================================================================================================================================================================================================================================================================
 
 3.	For all other Instance component definitions, use the default values provided by OpenStack. For details, see |OSLnchIn_deploy|.
