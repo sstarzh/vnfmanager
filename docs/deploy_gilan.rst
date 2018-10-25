@@ -56,7 +56,17 @@ For more information about Install Workflow see:
 Step 2. Stand up traffic server VM
 ----------------------------------
 
-1.  |srvInst_deploy|, and then define the following parameters, clicking :guilabel:`Next` to complete the wizard.
+Server VM can be launched from CLI or using Horizon UI.
+
+1. To launch traffic server VM from CLI SSH to `controller_neutron VM` and run:
+
+.. code-block:: console
+
+    $sudo -i
+    $source keystonerc_f5admin
+    #openstack server create --flavor 3 --image traffic_server_centos7 --key-name jumphost --security-group default --availability-zone nova --nic net-id=a2f1d633-73a3-4ef9-ac03-7687be16463e --user-data /home/cloud-user/userdata.sh traffic_server
+
+2. To deploy traffic server VM from Horizon UI: |srvInst_deploy|, and then define the following parameters, clicking :guilabel:`Next` to complete the wizard.
 
 :menuselection:`Project -> Compute -> Instance`
 
@@ -82,9 +92,11 @@ Component                                                    Description
                                                              -  Select Default security group :guilabel:`default`
 
 |kp_deploy|                                                  Select existing `jumphost.pem` key pair for accessing VNFM instance remotely from jumphost, using SSH.
+
+|conf|                                                       Click `Load from file` button and select `~/Downloads/userdata.sh` script 
 ============================================================ ======================================================================================================================================================================================================================================================================
 
-2.	For all other Instance component definitions, use the default values provided by OpenStack. For details, see |OSLnchIn_deploy|.
+3.	For all other Instance component definitions, use the default values provided by OpenStack. For details, see |OSLnchIn_deploy|.
 
 
 .. _statroute:
@@ -152,7 +164,11 @@ Step 4. Run test traffic to validate connectivity
 
 .. |srvInst_deploy| raw:: html
 
-    <a href="https://docs.openstack.org/horizon/rocky/user/launch-instances.html" target="_blank">create and name a Traffic Server instance</a>
+    <a href="https://docs.openstack.org/horizon/rocky/user/launch-instances.html" target="_blank">Create and name a Traffic Server instance</a>
+
+.. |conf| raw:: html
+
+    <a href="https://docs.openstack.org/horizon/latest/user/launch-instances.html" target="_blank">Select customization script</a>
 
 
 What’s Next?
