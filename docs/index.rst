@@ -26,10 +26,6 @@ F5 Virtual Network Function Manager (VNFM)
    :glob:
    :maxdepth: 2
 
-   CM-install-wf.rst
-   CM-scale-wf.rst
-   CM-heal-wf.rst
-   CM-AS3-update.rst
-   CM-uninstall-wf.rst
+   workflows.rst
    CM-UseSecrets.rst
    gi-inputs.rst
