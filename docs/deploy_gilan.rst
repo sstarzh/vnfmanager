@@ -157,23 +157,34 @@ Step 4. Run test traffic to validate connectivity
         Document Length:        4897 bytes
 
         Concurrency Level:      1
-        Time taken for tests:   0.006 seconds
-        Complete requests:      1
+        Time taken for tests:   0.067 seconds
+        Complete requests:      10
         Failed requests:        0
-        Non-2xx responses:      1
-        Total transferred:      5168 bytes
-        HTML transferred:       4897 bytes
-        Requests per second:    170.94 [#/sec] (mean)
-        Time per request:       5.850 [ms] (mean)
-        Time per request:       5.850 [ms] (mean, across all concurrent requests)
-        Transfer rate:          862.71 [Kbytes/sec] received
+        Non-2xx responses:      10
+        Total transferred:      51680 bytes
+        HTML transferred:       48970 bytes
+        Requests per second:    150.03 [#/sec] (mean)
+        Time per request:       6.665 [ms] (mean)
+        Time per request:       6.665 [ms] (mean, across all concurrent requests)
+        Transfer rate:          757.16 [Kbytes/sec] received
 
         Connection Times (ms)
-                      min  mean[+/-sd] median   max
-        Connect:        4    4   0.0      4       4
-        Processing:     2    2   0.0      2       2
-        Waiting:        2    2   0.0      2       2
-        Total:          6    6   0.0      6       6
+                    min  mean[+/-sd] median   max
+        Connect:        1    2   1.2      1       5
+        Processing:     4    5   0.4      5       6
+        Waiting:        1    2   0.3      2       2
+        Total:          6    7   1.4      6      10
+        
+        Percentage of the requests served within a certain time (ms)
+        50%      6
+        66%      6
+        75%      6
+        80%      7
+        90%     10
+        95%     10
+        98%     10
+        99%     10
+        100%     10 (longest request)
 
 
 .. |source_deploy| raw:: html
