@@ -140,7 +140,7 @@ Step 4. Run test traffic to validate connectivity
 
     .. code-block:: console
 
-        sudo ab -n 10 -c 1 -b 1400 -B eth1 http://<Server IP>/
+        sudo ab -n 10 -c 1 -b 1400 -B 10.1.20.2[0-4] http://<Server IP>/
 
 2. Output should contain statisticcal information on average RTT and # of bytes sent/received, among other data. Ensure Apache Bench received data back from the server.
 
