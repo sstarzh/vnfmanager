@@ -1,9 +1,7 @@
-ISC 2018 LABS
-=============
-F5 Virtual Network Function Manager (VNFM)
-==========================================
+VNF manager Workflows
+=====================
 
-
+.. _workflows:
 
 .. toctree::
    :caption: List of workflows supported by VNF manager
