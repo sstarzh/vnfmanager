@@ -66,7 +66,7 @@ Server VM can be launched from CLI or using Horizon UI.
     #source keystonerc_f5admin
     #openstack server create --flavor 3 --image traffic_server_centos7 --key-name jumphost --security-group default --availability-zone nova --nic net-id=a2f1d633-73a3-4ef9-ac03-7687be16463e --user-data /home/cloud-user/userdata.sh traffic_server
 
-2. To deploy traffic server VM from Horizon UI: |srvInst_deploy|, and then define the following parameters, clicking :guilabel:`Next` to complete the wizard.
+2. To launch traffic server VM from Horizon UI: |srvInst_deploy|, and then define the following parameters, clicking :guilabel:`Next` to complete the wizard.
 
 :menuselection:`Project -> Compute -> Instance`
 
