@@ -144,7 +144,36 @@ Step 4. Run test traffic to validate connectivity
 
 2. Output should contain statisticcal information on average RTT and # of bytes sent/received, among other data. Ensure Apache Bench received data back from the server.
 
-    .. image:: images/ab_output.png
+    .. code-block:: console
+
+        Benchmarking 10.1.52.13 (be patient).....done
+
+
+        Server Software:        Apache/2.4.6
+        Server Hostname:        10.1.52.13
+        Server Port:            80
+
+        Document Path:          /
+        Document Length:        4897 bytes
+
+        Concurrency Level:      1
+        Time taken for tests:   0.006 seconds
+        Complete requests:      1
+        Failed requests:        0
+        Non-2xx responses:      1
+        Total transferred:      5168 bytes
+        HTML transferred:       4897 bytes
+        Requests per second:    170.94 [#/sec] (mean)
+        Time per request:       5.850 [ms] (mean)
+        Time per request:       5.850 [ms] (mean, across all concurrent requests)
+        Transfer rate:          862.71 [Kbytes/sec] received
+
+        Connection Times (ms)
+                      min  mean[+/-sd] median   max
+        Connect:        4    4   0.0      4       4
+        Processing:     2    2   0.0      2       2
+        Waiting:        2    2   0.0      2       2
+        Total:          6    6   0.0      6       6
 
 
 .. |source_deploy| raw:: html
