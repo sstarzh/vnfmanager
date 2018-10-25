@@ -118,7 +118,7 @@ Step 3. Add static route to Openstack router
 
 3. Review target traffic flows
 
-.. note:: This lab uses SNAT Automap in VNF/FW BIG-IP for simplicity. Traffic from the server returned back to VNF instance, bypassing DAG layer 
+    .. note:: This lab uses SNAT Automap in VNF/FW BIG-IP for simplicity. Traffic from the server returned back to VNF instance, bypassing DAG layer 
     
     .. image:: images/networking.png
 
