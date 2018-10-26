@@ -203,6 +203,7 @@ Region                   Set to the OpenStack region where you will deploy bluep
 For more information, see :doc:`using the secret store <CM-UseSecrets>`.
 
 .. note:: A special jumphost script `vnfm-secrets.sh` can be used to update Secret Store. Use the script as a last resort option
+    
     .. code-block:: console
 
         $sudo ~/Downloads/vnfm-secrets.sh <vnfmanager .40 net IP>
