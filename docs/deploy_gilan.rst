@@ -22,7 +22,7 @@ define all required parameters for the F5 Gilan yaml blueprint.
 
 4.  On the left-side menu click the :guilabel:`Deployments` blade, in the list next to blueprint you created in the preivous step, expand |menuIcon_deploy|, click :guilabel:`Gilan install`, and then click :guilabel:`Execute`. VNFM starts creating BIG-IP VEs according to the parameters you defined for your network. Also installed includes additional, sub-blueprints packaged with the F5 gilan blueprint.
 
-.. image:: images/gilan_install.png
+.. image:: images/gilan_install2.png
 
 6.	Once your blueprint install finishes executing, to view a model of your VNF installation, on the :guilabel:`Deployments` blade, click a **name** from the list. A model of your VNF topology appears, along with a list of all the nodes, and event logs.
 
