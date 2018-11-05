@@ -14,7 +14,7 @@ Step 1. Deploy Gilan blueprint
 Once you change all the values in the Gi LAN inputs file and save it locally, upload the file in F5 VNF Manager. It will
 define all required parameters for the F5 Gilan yaml blueprint.
 
-1.	Open F5 VNFM, click :guilabel:`Local Blueprints`. The :guilabel:`F5-VNF-Service-Layer_v0.2.24.2-devel` main blueprint file appears.
+1.	Open F5 VNFM, click :guilabel:`Local Blueprints`. The :guilabel:`F5-VNF-Service-Layer-GiLAN_1.0.0` main blueprint file appears.
 
 2.  Click :guilabel:`Deploy`.
 
