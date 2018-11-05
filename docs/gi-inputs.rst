@@ -74,7 +74,7 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
 
   # BIG-IQ License Manager
   big_iq_host: 10.1.20.14                                     # Management IP address of the BIG-IQ License Manager
-  big_iq_lic_pool: regkeys2                                 # Pool Name containing the BIG-IP VE Licenses created on the BIG-IQ from the Reg Key provided in the Email from F5
+  big_iq_lic_pool: regkeys                                 # Pool Name containing the BIG-IP VE Licenses created on the BIG-IQ from the Reg Key provided in the Email from F5
 
   # BGP Router Config
   bgp_dag_pgw_peer_ip: 10.1.55.201                              # IP address of the PGateway router use for BGP Neighbor command
