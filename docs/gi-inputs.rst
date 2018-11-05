@@ -17,95 +17,107 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
 
 .. code-block:: yaml
 
-  # Gilan inputs
-  pgw_dag_subnet_mask: '/24'
-  big_ip_root_user: root
-  default_gateway: 10.1.52.1
-  blueprint_name: "F5-VNF-Service-Layer_v0282-devel"
-  # VNF Resource Information Collector inputs
-  ric_throughput: "5"
-  ric_purchasing_model: subscription
-  ric_licensing: gilan
-  ric_vnfm_license: "12345"
-  auto_last_hop: "disabled"
+  # VNF Resource Information Collector inputs for Reporting
+  ric_purchasing_model: subscription                             # perpetual or subscription
+  ric_throughput: '5'                                            # 5, 10, or 50 Gbps total throughput for a layer
+  ric_vnfm_serial: '12345'                                       # Serial Number from purchasing email
 
-  # VNF inputs
-  ctrl_net: control
-  ctrl_subnet: control_subnet
-  ha_net: ha_net
-  ha_subnet: ha_subnet
+  # VNF specific inputs
+  auto_last_hop: "disabled"                                      # disables last_hop on VNF and creates inbound VS on DAG when No CGNAT, or when CGNAT is not F5 BIG-IP
+  default_gateway: 10.1.52.1                                     # The default gateway the VNF should use to reach the Internet
+
+  ####    Scaling Thresholds and Values   ############################################################################
+  # Maximum number of 'instances' that can be created during scale out
+  max_scale_dag_group: '1000'                                    # Max Dag Group Members
+  max_scale_vnf_group: '1000'                                    # Max VNF Group Members
+
+  # Max number of times that a heal can be tried before giving up.
+  max_heal_vnfd_dag_ve: '5'
+  max_heal_vnf_layer: '5'
+  max_heal_vnf_slave_ve: '5'
+
+  # VNF Layer scaling inputs
+  vnf_layer_cpu_threshold: '15'                                  # percent of aggregated CPU for when to scale the next slave member
+  vnf_layer_cpu_threshold_check_interval: '1'                    # number of seconds between checks .5 is possible
+
+  # VNF Group scaling inputs
+  vnf_group_throughput: '10'                                     # 5, 10 or 50 total agregated Gbps for entire layer
+  vnf_group_throughput_threshold: '50'                           # percent of aggregated CPU for when to scale the next layer
+  vnf_group_throughput_check_interval: '1'                    # number of seconds between checks .5 is possible
+
+  # DAG Group scaling inputs
+  dag_group_cpu_threshold: '50'                                # percent of aggregated CPU for when to scale the next dag member
+  dag_group_cpu_threshold_check_interval: '1'                 # number of seconds between checks .5 is possible
+
+  ####################################################################################################################
 
   # Nagios inputs
-  floating_network_id: <changeMe>
-  centos_image_id: dd291320-035b-479f-9e98-e05c6d7c44d2
-  nagios_flavor_id: 5371c5f1-2496-4862-a0ea-b740b7000162
-
-  vnf_scale_out_threshold_for_sysStatClientServerBytesInOut: "250000"
-  dag_scale_out_threshold_for_sysGlobalTmmStatTmUsageRatio1m: "99"
-  vnf_scale_out_threshold_for_sysGlobalTmmStatTmUsageRatio1m: "99"
-
-  vnf_check_interval_for_sysStatClientServerBytesInOut: "1"
-  vnf_check_interval_for_sysGlobalTmmStatTmUsageRatio1m: "1"
-  dag_check_interval_for_sysGlobalTmmStatTmUsageRatio1m: "1"
-
-  # New since 0.2.24.0
-  vnf_group_throughput_threshold: "75"
-  vnf_group_throughput: "10"
-  vnf_layer_cpu_threshold: "20"
-  dag_group_cpu_threshold: "75"
-  vnf_layer_cpu_threshold_check_interval: "1"
-  vnf_group_throughput_check_interval: "1"
-  dag_group_cpu_threshold_check_interval: "1"
-  min_scale_dag_group: "2"
-  max_scale_dag_group: "1000"
-  min_scale_vnf_layer: "1"
-  max_scale_vnf_layer: "31"
-  min_scale_vnf_group: "1"
-  max_scale_vnf_group: "1000"
-  max_heal_vnf_layer: "5"
-  max_heal_vnfd_dag_ve: "5"
-  max_heal_vnf_slave_ve: "5"
+  floating_network_id: <extnet UUID>                          # OpenStack ID of the floating IP network
+  centos_image_id: dd291320-035b-479f-9e98-e05c6d7c44d2       # OpenStack ID of the CentOS image to use for the monitoring nodes
+  nagios_flavor_id: 5371c5f1-2496-4862-a0ea-b740b7000162      # OpenStack ID of the flavor to use for the monitoring nodes
 
   # Common inputs
-  cm_ip: <changeMe>
+  bigip_os_ssh_key: jumphost                                  # OpenStack SSH Key Name
+  cm_ip: <VNF manager instance .40 IP>                        # The management IP address of the VNF Manager
+
+  # Software references for the BIG-IP VE
   sw_ref_dag:
-    data:
-      image: BIG-IP-13.1.0.7
-      flavor: m1.large
-    revision: 0
+      data:
+         image: BIG-IP-13.1.0.7                              # OpenStack Image Name
+         flavor: m1.large                                    # OpenStack Flavor Name
+     revision: 0
   sw_ref_vnf:
-    data:
-      image: BIG-IP-13.1.0.7
-      flavor: m1.large
-    revision: 0
-  bigip_os_ssh_key: jumphost
+      data:
+          image: BIG-IP-13.1.0.7                              # OpenStack Image Name
+         flavor: m1.large                                    # OpenStack Flavor Name
+     revision: 0
 
-  big_iq_host: 10.1.20.14
-  big_iq_lic_pool: regkeys
+  # BIG-IQ License Manager
+  big_iq_host: 10.1.20.14                                     # Management IP address of the BIG-IQ License Manager
+  big_iq_lic_pool: regkeys2                                 # Pool Name containing the BIG-IP VE Licenses created on the BIG-IQ from the Reg Key provided in the Email from F5
 
+  # BGP Router Config
+  bgp_dag_pgw_peer_ip: 10.1.55.201                              # IP address of the PGateway router use for BGP Neighbor command
+  bgp_vnf_pgw_peer_ip: 10.1.55.201                            # IP address of the PGateway router that the VNF will use to route traffic back to the UE devices
+  bgp_pgw_peer_as: '200'                                      # Autonomous System (AS) number of the PGateway BGP router
+  bgp_dag_egw_peer_ip: 10.1.52.201                             # IP address of the External Gateway router that the DAG will advertise to to send traffic back to the UE devices
+  bgp_egw_peer_as: '300'                                      # Autonomous System (AS) number of the External Gateway BGP router
+
+
+  # Security Groups In OpenStack
   ctrl_sg_name: control_sg
   mgmt_sg_name: mgmt_sg
   pgw_sg_name: pgw_sg
   pdn_sg_name: pdn_sg
   snmp_sg_name: snmp_sg
 
+  # Networks and Subnets in OpenStack
   mgmt_net: mgmt
   mgmt_subnet: mgmt_subnet
-  mgmt_port: "443"
-
   pgw_net: pgw_net
   pgw_subnet: pgw_net_subnet
   pdn_net: pdn_net
   pdn_subnet: pdn_net_subnet
-
   pgw_dag_net: pgw_dag_net
   pgw_dag_subnet: pgw_dag_subnet
-  pgw_dag_subnet_cidr: 10.1.55.0/24
-
   pdn_dag_net: pdn_dag_net
   pdn_dag_subnet: pdn_dag_subnet
+  ctrl_net: control
+  ctrl_subnet: control_subnet
+  ha_net: ha_net
+  ha_subnet: ha_subnet
+  pgw_dag_subnet_cidr: 10.1.55.0/24
+  pgw_dag_subnet_mask: '/24'
   pdn_dag_subnet_cidr: 10.1.52.0/24
 
+  #####################################################################################
+  # Configuration of the F5 VNF Service Layers in AS3 Declaration format              #
+  #    Example: Your Firewall Configuration.                                          # 
+  #    Example: Your Subscriber based Policy enforcement Configuration.               #
+  # The format of this YAML is critical, please use a YAML linter, and double check   #
+  # the spelling of keys and values.  If any of the declaration is incorrect, an HTTP #
+  # 422 error will be seen the deployment logs.                                       #
+  #####################################################################################
   vnf_as3_nsd_payload:
     class: AS3
     action: deploy
@@ -125,6 +137,10 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
             class: iRule
             iRule: when LB_SELECTED {log local0. "Selected server [LB::server]"}
             remark: Log load balanced server
+          cpu_killer:
+            remark: Log load balanced server
+            iRule: "when HTTP_REQUEST {\r\n    # Kill CPU Cycles\r\n    set count 10\r\n    for {set i 0} { $i < $count } {incr i} {\r\n        set keys [CRYPTO::keygen -alg rsa -salthex 0f0f0f0f0f0f0f0f0f0f -len 1024]\r\n        set pub_rsakey [lindex $keys 0]\r\n        set priv_rsakey [lindex $keys 1]\r\n        set data [string repeat \"rsakeygen1\" 11]\r\n        set enc_data [CRYPTO::encrypt -alg rsa-pub -key $pub_rsakey $data]\r\n        HTTP::header insert rsa_encrypted \"$enc_data\"\r\n        set dec_data [CRYPTO::decrypt -alg rsa-priv -key $priv_rsakey $enc_data]\r\n    }\r\n\r\n\t# Set some basic response headers\r\n\tset server_name \"BIG-IP ($static::tcl_platform(machine))\"\r\n\tset conn_keepalive \"Close\"\r\n\tset content_type \"text\/plain; charset=us-ascii\"\r\n\r\n    # initialize response page\r\n    set page \"[clock format [clock seconds] -format {%A %B,%d %Y - %H:%M:%S (%Z)}]\\r\\n\"\r\n\tappend page \"Hello!\\r\\n\"\r\n\r\n    # return response page\r\n    HTTP::respond 200 content ${page} noserver Server ${server_name} Connection ${conn_keepalive} Content-Type $content_type\r\n}"
+            class: iRule
           profileL4:
             class: L4_Profile
           serviceAddress:
@@ -132,50 +148,34 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
             arpEnabled: False
             spanningEnabled: True
             virtualAddress: 0.0.0.0
-        firewall_any:
+        f5_http:
           class: Application
-          template: generic
+          template: http
           serviceMain:
             allowVlans:
             - bigip: /Common/pgw_dag_net
-            class: Service_Generic
+            translateServerAddress: false
+            layer4: tcp
+            profileHTTP:
+             bigip: /Common/http
+            virtualPort: 0
             iRules:
             - /f5vnf/Shared/lbSelectedRule
-            layer4: any
-            profileL4:
-              use: /f5vnf/Shared/profileL4
-            snat: auto
-            lastHop: disable
-            translateServerAddress: False
-            translateServerPort: False
-            virtualAddresses:
-            - use: /f5vnf/Shared/serviceAddress
-            virtualPort: 0
-        firewall_fastL4:
-          class: Application
-          template: l4
-          serviceMain:
-            class: Service_L4
-            layer4: tcp
-            allowVlans:
-              - bigip: /Common/pgw_dag_net
+            - /f5vnf/Shared/cpu_killer
+            translateServerPort: false
             profileL4:
               use: /f5vnf/Shared/profileL4
             virtualAddresses:
             - use: /f5vnf/Shared/serviceAddress
-            virtualPort: 0
-            translateServerAddress: False
-            translateServerPort: False
-            snat: auto
+            snat: none
             lastHop: disable
-            iRules:
-              - /f5vnf/Shared/lbSelectedRule
-        firewall_inbound:
+            class: Service_HTTP
+        f5_inbound:
           class: Application
           template: generic
           serviceMain:
-            allowVlans:
-            - bigip: /Common/pdn_dag_net
+           allowVlans:
+           - bigip: /Common/pdn_dag_net
             class: Service_Generic
             iRules:
             - /f5vnf/Shared/lbSelectedRule
@@ -188,5 +188,6 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
             virtualAddresses:
             - use: /f5vnf/Shared/serviceAddress
             virtualPort: 0
+
 
 
