@@ -31,7 +31,7 @@ Component                                                    Description
 ============================================================ ======================================================================================================================================================================================================================================================================
 |source_deploy|                                              Expand :guilabel:`Select Boot Source`, and choose :guilabel:`Image`, under :guilabel:`Create New Volume`, click :guilabel:`No`, and then click :guilabel:`+` next to the latest VNFM image file to move it to the :guilabel:`Allocated` list.
                                                              
-                                                             .. image:: images/novol.png
+                                                             .. image:: images/novol2.png
 
 |flavors_deploy|                                             Select a flavor sized accordingly, to accommodate the VNFM component images you previously uploaded. The minimum flavor requirements for deploying the F5 VNF Manager include:
 
