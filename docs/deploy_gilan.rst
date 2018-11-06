@@ -40,7 +40,7 @@ define all required parameters for the F5 Gilan yaml blueprint.
 
 Resulting Gilan deployment architecture includes 2 DAG and 2 ( master + 1 slave) VNF instances:
 
-.. image:: images/arch_depl.png
+.. image:: images/arch_depl2.png
 
 .. image:: images/wf_complete.png
 
