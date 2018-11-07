@@ -64,7 +64,7 @@ Server VM can be launched from CLI or using Horizon UI.
 
     $sudo -i
     #source keystonerc_f5admin
-    #openstack server create --flavor 3 --image traffic_server_centos7 --key-name jumphost --security-group default --availability-zone nova --nic net-id=a2f1d633-73a3-4ef9-ac03-7687be16463e --user-data /home/cloud-user/userdata.sh traffic_server
+    #openstack server create --flavor 3 --image traffic_server_centos7 --key-name jumphost --security-group default --availability-zone nova --nic port-id=server_ip --nic net-id=f0471994-6fb2-41ca-b0f8-568bd56769a5 --user-data /home/cloud-user/userdata.sh traffic_server
 
 2. To launch traffic server VM from Horizon UI: |srvInst_deploy|, and then define the following parameters, clicking :guilabel:`Next` to complete the wizard.
 
@@ -107,12 +107,12 @@ Component                                                    Description
 Step 3. Add static route to Openstack router
 --------------------------------------------
 
-1. Note DAG layer BIG-IP `pgw_net`  
+1. Note DAG1 BIG-IP `pgw_net`  
 
 2. Select :guilabel:`Project` --> :guilabel:`Network` --> :guilabel:`Routers` and click on :guilabel:`router1`
     Open :guilabel:`Static Routes` tab and click on :guilabel:`Add Static Route`
     Add the following route: 
-    `<Server VM IP>/32` Next Hop `<DAG layer BIG-IP pgw_net IP>`
+    `10.1.60.101/32` Next Hop `<DAG1 BIG-IP pgw_net IP>`
 
     .. image:: images/static.png
 

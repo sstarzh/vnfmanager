@@ -17,14 +17,14 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
 
 .. code-block:: yaml
 
-  # VNF Resource Information Collector inputs for Reporting
+# VNF Resource Information Collector inputs for Reporting
   ric_purchasing_model: subscription                             # perpetual or subscription
   ric_throughput: '5'                                            # 5, 10, or 50 Gbps total throughput for a layer
   ric_vnfm_serial: '12345'                                       # Serial Number from purchasing email
 
   # VNF specific inputs
   auto_last_hop: "disabled"                                      # disables last_hop on VNF and creates inbound VS on DAG when No CGNAT, or when CGNAT is not F5 BIG-IP
-  default_gateway: 10.1.52.1                                     # The default gateway the VNF should use to reach the Internet
+  default_gateway: 10.1.52.101                                     # The default gateway the VNF should use to reach the Internet
 
   ####    Scaling Thresholds and Values   ############################################################################
   # Maximum number of 'instances' that can be created during scale out
@@ -52,25 +52,25 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
   ####################################################################################################################
 
   # Nagios inputs
-  floating_network_id: <extnet UUID>                          # OpenStack ID of the floating IP network
+  floating_network_id: <changeMe>                          # OpenStack ID of the floating IP network (extnet)
   centos_image_id: dd291320-035b-479f-9e98-e05c6d7c44d2       # OpenStack ID of the CentOS image to use for the monitoring nodes
   nagios_flavor_id: 5371c5f1-2496-4862-a0ea-b740b7000162      # OpenStack ID of the flavor to use for the monitoring nodes
 
   # Common inputs
   bigip_os_ssh_key: jumphost                                  # OpenStack SSH Key Name
-  cm_ip: <VNF manager instance .40 IP>                        # The management IP address of the VNF Manager
+  cm_ip: <changeMe>                        # The management IP address (.40 subnet) of the VNF Manager
 
   # Software references for the BIG-IP VE
   sw_ref_dag:
       data:
          image: BIG-IP-13.1.0.7                              # OpenStack Image Name
          flavor: m1.large                                    # OpenStack Flavor Name
-     revision: 0
+      revision: 0
   sw_ref_vnf:
       data:
           image: BIG-IP-13.1.0.7                              # OpenStack Image Name
-         flavor: m1.large                                    # OpenStack Flavor Name
-     revision: 0
+          flavor: m1.large                                    # OpenStack Flavor Name
+      revision: 0
 
   # BIG-IQ License Manager
   big_iq_host: 10.1.20.14                                     # Management IP address of the BIG-IQ License Manager
@@ -177,17 +177,18 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
            allowVlans:
            - bigip: /Common/pdn_dag_net
             class: Service_Generic
-            iRules:
-            - /f5vnf/Shared/lbSelectedRule
-            layer4: any
-            profileL4:
-              use: /f5vnf/Shared/profileL4
-            snat: none
-            translateServerAddress: False
-            translateServerPort: False
-            virtualAddresses:
-            - use: /f5vnf/Shared/serviceAddress
-            virtualPort: 0
+             iRules:
+             - /f5vnf/Shared/lbSelectedRule
+             layer4: any
+             profileL4:
+               use: /f5vnf/Shared/profileL4
+             snat: none
+             translateServerAddress: False
+             translateServerPort: False
+             virtualAddresses:
+             - use: /f5vnf/Shared/serviceAddress
+             virtualPort: 0
+
 
 
 
