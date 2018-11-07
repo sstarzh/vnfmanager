@@ -52,13 +52,13 @@ Once completed, you will |uploadFile_gi-inputs| into VNFM to auto-complete the F
  ####################################################################################################################
 
  # Nagios inputs
- floating_network_id: 530afb38-4933-46f1-bf68-63ef9f706f71                             # OpenStack ID of the floating IP network
+ floating_network_id: <changeMe>                             # OpenStack ID of the floating IP network (extnet)
  centos_image_id: dd291320-035b-479f-9e98-e05c6d7c44d2       # OpenStack ID of the CentOS image to use for the monitoring nodes
  nagios_flavor_id: 5371c5f1-2496-4862-a0ea-b740b7000162      # OpenStack ID of the flavor to use for the monitoring nodes
 
  # Common inputs
  bigip_os_ssh_key: jumphost                                  # OpenStack SSH Key Name
- cm_ip: 10.1.40.8                                           # The management IP address of the VNF Manager
+ cm_ip: <changeMe>                                           # The management IP address (.40 subnet) of the VNF Manager
 
  # Software references for the BIG-IP VE
  sw_ref_dag:
