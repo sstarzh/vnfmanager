@@ -79,7 +79,7 @@ Run the following script:
 
 3. Review target traffic flows
 
-    .. note:: This lab uses SNAT Automap in VNF/FW BIG-IP for simplicity. Traffic from the server returned back to VNF instance, bypassing DAG layer 
+    .. note:: This lab uses pdn_dag_net to return traffic from server to DAG2 instance. This is due to various environment limitations
     
     .. image:: images/networking.png
 
