@@ -3,8 +3,7 @@ Part III. Deploy local F5 Gilan blueprint and create traffic server VM
 
 1. :ref:`Deploy Gilan blueprint <gilan>`
 2. :ref:`Stand up traffic server VM <servervm>`
-3. :ref:`Add static route <statroute>`
-4. :ref:`Run test traffic <test>`
+3. :ref:`Run test traffic <test>`
 
 .. _gilan:
 
@@ -58,63 +57,25 @@ Step 2. Stand up traffic server VM
 
 Server VM can be launched from CLI or using Horizon UI.
 
-1. To launch traffic server VM from CLI SSH to `controller_neutron VM` and run:
+1. To launch traffic server VM from CLI SSH to `controller_neutron VM`
+
+.. image:: images/controller_shortcut.png
+
+Run the following script:
 
 .. code-block:: console
 
-    $sudo -i
-    #source keystonerc_f5admin
-    #openstack server create --flavor 3 --image traffic_server_centos7 --key-name jumphost --security-group default --availability-zone nova --nic port-id=server_ip --nic net-id=f0471994-6fb2-41ca-b0f8-568bd56769a5 --user-data /home/cloud-user/userdata.sh traffic_server
+    #./create_trafficserver.sh
 
-2. To launch traffic server VM from Horizon UI: |srvInst_deploy|, and then define the following parameters, clicking :guilabel:`Next` to complete the wizard.
+.. note:: Script will perform the following actions automatically to simplify lab process:
+    1. Add route to traffic_server via DAG1 on router1
+    2. Add route to client via DAG2 in userdata.sh for traffic_server
+    3. Stand up traffic server with corresponding neutron port/ip and passes userdata.sh as user data
 
-:menuselection:`Project -> Compute -> Instance`
+2. Verify traffic_server VM is in Running state and has correct IP assigned
 
-============================================================ ======================================================================================================================================================================================================================================================================
-Component                                                    Description
-============================================================ ======================================================================================================================================================================================================================================================================
-|source_deploy|                                              Expand :guilabel:`Select Boot Source`, and choose :guilabel:`Image`, under :guilabel:`Create New Volume`, click :guilabel:`No`, and then click :guilabel:`+` next to the `lamp-server-turnkey-15.0-stretch` image file to move it to the :guilabel:`Allocated` list.
-                                                             
-                                                             .. image:: images/server.png
+.. image:: images/traffic_server_vm.png
 
-|flavors_deploy|                                             Select :guilabel:`small` flavor
-
-                                                             -  vCPU: 1
-                                                             -  RAM: 2GB
-                                                             -  Root disk: 20GB
-
-|networks_deploy|                                            Select :guilabel:`+` next to the following predefined network (and subnet), to add to the :guilabel:`Allocated` list:
-
-                                                             -  :guilabel:`PDN DAG Network (pdn_dag_net)` – Traffic Server will only communicate with BIG-IP FW instance.
-
-|sg_deploy|                                                  Select :guilabel:`+` next to the following, predefined security group to add to the :guilabel:`Allocated` list:
-
-                                                             -  Select Default security group :guilabel:`default`
-
-|kp_deploy|                                                  Select existing `jumphost.pem` key pair for accessing VNFM instance remotely from jumphost, using SSH.
-
-|conf|                                                       Click `Browse...` button under `Load from file` and select `~/Downloads/userdata.sh` script. `Customization script` field will be populated with script contents.
-                                                            
-                                                             .. image:: images/userscript.png
-
-============================================================ ======================================================================================================================================================================================================================================================================
-
-3.	For all other Instance component definitions, use the default values provided by OpenStack. For details, see |OSLnchIn_deploy|.
-
-
-.. _statroute:
-
-Step 3. Add static route to Openstack router
---------------------------------------------
-
-1. Note DAG1 BIG-IP `pgw_net`  
-
-2. Select :guilabel:`Project` --> :guilabel:`Network` --> :guilabel:`Routers` and click on :guilabel:`router1`
-    Open :guilabel:`Static Routes` tab and click on :guilabel:`Add Static Route`
-    Add the following route: 
-    `10.1.60.101/32` Next Hop `<DAG1 BIG-IP pgw_net IP>`
-
-    .. image:: images/static.png
 
 3. Review target traffic flows
 
@@ -133,7 +94,7 @@ Step 3. Add static route to Openstack router
 
 .. _test:
 
-Step 4. Run test traffic to validate connectivity
+Step 3. Run test traffic to validate connectivity
 -------------------------------------------------
 
 1. SSH to UDF `traffic_gen` VM and run Apache Bench command
