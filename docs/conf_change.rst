@@ -13,17 +13,33 @@ This lab contains a modified AS3 payload that will provision AFM policy and rule
 .. _existing:
 
 
-1. Check VNF BIG-IP FW rules and configuration. There should be no policy or rules configured
+Step 1. Check Existing VNF BIG-IP configuration
+-----------------------------------------------
 
-:guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules`
+Check VNF BIG-IP FW rules and configuration. There should be no policy or rules configured
+
+1. Check **Master** VNF BIG-IP Management IP in Openstack Horizon UI:
+
+:guilabel:`Project` --> :guilabel:`Compute` --> :guilabel:`Instances`
+
+2. Point the browser to .40 IP of **Master** VNF BIG-IP and login as admin
+
+3. Navigate to :guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules`
 
 .. image:: images/after_as3.png FIX THIS
 
 
 .. _as3_change:
 
-2. To change the AFM configuration, select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
-Expand |menuIcon_deploy|, click :guilabel:`Gilan update as3 nsd`, paste the entire AS3 payload and then click :guilabel:`Execute`.
+
+Step 2. Apply updated AS3 configuration
+---------------------------------------
+
+2. To change the AFM configuration, open `as3_update.yaml` on jumphost Desktop and copy it's contents
+
+select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
+
+Expand |menuIcon_deploy|, click :guilabel:`Gilan update as3 nsd`, paste the entire AS3 payload copied from the file, and then click :guilabel:`Execute`.
 
 .. |menuIcon_deploy| image:: images/menuIcon.png
 
