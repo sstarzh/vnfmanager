@@ -8,7 +8,7 @@ load-balancing, and high availability (HA).
 
 When finished deploying your VNFM, you will have the following system:
 
-.. image:: images/VNFM-diagram2.png
+.. image:: images/VNFM-diagram4.png
 
 F5 VNFM resides in the |MANO_about| layer. Once you upload BIG-IQ, BIG-IP, and the VNFM images
 into OpenStack, and deploy the VNFM blueprint, the BIG-IQ license manager, BIG-IPs deployed by the blueprint, and your VNFM will comprise the management network.
