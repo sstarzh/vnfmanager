@@ -14,7 +14,7 @@ Step 1. Run Apache Bench from traffic_gen VM
 
     .. code-block:: console
 
-        ./run_traffic.sh 10.1.52.XX
+        ./run_traffic.sh 10.1.52.101
 
 2. Log files are generated for each thread and are located in the same directory (ab[1-10].out)
 
@@ -31,14 +31,13 @@ Step 2. Watch BIG-IP statistics and scaleout process in VNF manager
 2. Point your browser to the public floating `10.1.20.x` IP address of VNF Manager VM
     a. Login to VNF manager UI and click on :guilabel:`Deployments` from the left-side menuIcon
     b. Watch as VNF manager performs auto scale-out of VNF(FW) instances
-3. SSH to Nagios VM from jumphost using jumphost.pem key and watch nagios log file:
+3. Open a new tab in the browser and point it to the public floating `10.1.20.x` IP address of Nagios VM. Login using Nagios credentials and navigate to :menuselection:`Services` 
+See :ref:`Credentials <credentials>`
 
-    .. code-block:: console
-    
-        ssh -i ~/Downloads/jumphost.pem centos@10.1.20.XXX
-        sudo -i
-        less /var/log/nagios/nagios.log
+    .. image:: images/nagios.png
 
+4. 
+       
 
 .. |menuIcon_use| image:: images/menuIcon.png
 

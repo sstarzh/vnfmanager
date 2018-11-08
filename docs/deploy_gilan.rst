@@ -70,7 +70,7 @@ Run the following script:
 .. note:: Script will perform the following actions automatically to simplify lab process:
     1. Add route to traffic_server via DAG1 on router1
     2. Add route to client via DAG2 in userdata.sh for traffic_server
-    3. Stand up traffic server with corresponding neutron port/ip and passes userdata.sh as user data
+    3. Stand up traffic server with corresponding neutron port/ip and userdata.sh as user data
 
 2. Verify traffic_server VM is in Running state and has correct IP assigned
 
@@ -165,7 +165,7 @@ Step 3. Run test traffic to validate connectivity
     Thursday November,08 2018 - 14:40:38 (UTC)
     Hello!
 
-    
+
 
 .. |source_deploy| raw:: html
 
