@@ -173,6 +173,7 @@ The F5 blueprint uses an inputs.yaml file that you edit, adding your system defi
 .. note:: The 2 parameters that need to be changed are: cm_ip, floating_network_id
 
 cm_ip: :menuselection:`Horizon UI: Project -> Compute -> Instances -> vnfmanager` `10.1.40.x` IP address of the VNF Manager instance
+
 floating_network_id: :menuselection:`Horizon UI: Project -> Networks -> Network -> extnet`
 
 
