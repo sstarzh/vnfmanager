@@ -31,7 +31,7 @@ Component                                                    Description
 ============================================================ ======================================================================================================================================================================================================================================================================
 |source_deploy|                                              Expand :guilabel:`Select Boot Source`, and choose :guilabel:`Image`, under :guilabel:`Create New Volume`, click :guilabel:`No`, and then click :guilabel:`+` next to the latest VNFM image file to move it to the :guilabel:`Allocated` list.
                                                              
-                                                             .. image:: images/novol2.png
+                                                             .. image:: images/novol3.png FIX THIS
 
 |flavors_deploy|                                             Select m1.large flavor
 
@@ -156,7 +156,7 @@ For list of credentials updated by script, see |secretstore|
 
     <a href="https://docs.openstack.org/keystone/latest/configuration.html" target="_blank">docs.openstack.org</a>
 
-    .. |secretstore| raw:: html
+.. |secretstore| raw:: html
 
     <a href="https://clouddocs.f5.com/cloud/nfv/latest/deploy.html#step-5-manage-secrets" target="_blank">Manage Secrets</a>
 
