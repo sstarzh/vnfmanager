@@ -29,7 +29,7 @@ Blueprint component                             username/password
 =============================================== =====================================================
 BIG-IQ TMUI                                     admin/admin
 BIG-IQ SSH                                      root/default
-jumphost xRDP                                   ubuntu/ubuntu
+jumphost xRDP                                   ubuntu/ravelloCloud
 Openstack Horizon UI                            f5admin/f5admin
 VNFmanager VM                                   admin/admin
 BIG-IP VMs TMUI                                 admin/admin
