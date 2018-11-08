@@ -46,7 +46,7 @@ Start UDF environment
 
 1. **Deploy "Packaged NFV Solutions" blueprint and start it Southwest(Arizona) or East(Virginia) Ravello region**
     
-.. image:: images/bp.png
+.. image:: images/bp2.png
 
 
 2. **Wait until all components are in "Running" state. BIG-IQ usually boots last**
