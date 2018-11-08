@@ -274,6 +274,8 @@ Step 3. Validate configuration change
 
 :ref:`Run test traffic <test>`
 
+.. note:: This test is the same as in Part III Step 3 of this lab guide
+
 
 What’s Next?
 
