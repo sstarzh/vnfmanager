@@ -1,6 +1,9 @@
 VNF manager Workflows
 =====================
 
+VNF manager Workflow-deployment matrix: |matrix|
+
+
 .. _workflows:
 
 .. toctree::
@@ -13,3 +16,8 @@ VNF manager Workflows
    CM-heal-wf.rst
    CM-AS3-update.rst
    CM-uninstall-wf.rst
+
+
+.. |matrix| raw:: html
+
+    <a href="https://clouddocs.f5.com/cloud/nfv/latest/workflow-matrix.html" target="_blank">Workflow-deployment matrix</a>
