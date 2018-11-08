@@ -146,6 +146,10 @@ AS3 payload for configuration of Firewall rules
                     class: iRule
                     iRule: when LB_SELECTED {log local0. "Selected server [LB::server]"}
                     remark: Log load balanced server
+                cpu_killer:
+                    remark: Log load balanced server
+                    iRule: "when HTTP_REQUEST {\r\nif {[IP::addr [IP::client_addr] equals 10.1.20.20]} {\r\n# Do nothing and forward traffic to server\r\nlog local0. \"Source IP is 10.1.20.20 - Forwarding to destination...\" \r\nreturn\r\n} else {\r\n    # Kill CPU Cycles\r\n    log local0. \"Running CPU killer and responding locally...\"\r\n    set count 10\r\n    for {set i 0} { $i < $count } {incr i} {\r\n        set keys [CRYPTO::keygen -alg rsa -salthex 0f0f0f0f0f0f0f0f0f0f -len 1024]\r\n        set pub_rsakey [lindex $keys 0]\r\n        set priv_rsakey [lindex $keys 1]\r\n        set data [string repeat \"rsakeygen1\" 11]\r\n        set enc_data [CRYPTO::encrypt -alg rsa-pub -key $pub_rsakey $data]\r\n        HTTP::header insert rsa_encrypted \"$enc_data\"\r\n        set dec_data [CRYPTO::decrypt -alg rsa-priv -key $priv_rsakey $enc_data]\r\n    }\r\n\t# Set some basic response headers\r\n\tset server_name \"BIG-IP ($static::tcl_platform(machine))\"\r\n\tset conn_keepalive \"Close\"\r\n\tset content_type \"text\/plain; charset=us-ascii\"\r\n    # initialize response page\r\n    set page \"[clock format [clock seconds] -format {%A %B,%d %Y - %H:%M:%S (%Z)}]\\r\\n\"\r\n\tappend page \"Hello!\\r\\n\"\r\n    # return response page\r\n    HTTP::respond 200 content ${page} noserver Server ${server_name} Connection ${conn_keepalive} Content-Type $content_type\r\n}\r\n}\r\n"
+                    class: iRule
                 profileL4:
                     class: L4_Profile
                 serviceAddress:
@@ -169,37 +173,40 @@ AS3 payload for configuration of Firewall rules
                         use: /f5vnf/Shared/profileL4
                     securityLogProfiles:
                         - use: /f5vnf/Shared/fwSecurityLogProfile
-                    snat: auto
+                    snat: none
                     lastHop: disable
                     translateServerAddress: false
                     translateServerPort: false
                     virtualAddresses:
                         - use: /f5vnf/Shared/serviceAddress
                     virtualPort: 0
-            firewall_fastL4:
-                class: Application
-                template: l4
-                serviceMain:
-                    class: Service_L4
-                    layer4: tcp
-                    allowVlans:
-                        - bigip: /Common/pgw_dag_net
-                    profileL4:
-                        use: /f5vnf/Shared/profileL4
-                    virtualAddresses:
-                        - use: /f5vnf/Shared/serviceAddress
-                    virtualPort: 0
-                    translateServerAddress: false
-                    translateServerPort: false
-                    snat: auto
-                    lastHop: disable
-                    iRules:
-                        - /f5vnf/Shared/lbSelectedRule
-                    policyFirewallEnforced:
-                        use: /f5vnf/Shared/fwPolicy
-                    securityLogProfiles:
-                      - use: /f5vnf/Shared/fwSecurityLogProfile
-            firewall_inbound:
+            f5_http:
+              class: Application
+              template: http
+              serviceMain:
+                allowVlans:
+                - bigip: /Common/pgw_dag_net
+                translateServerAddress: false
+                layer4: tcp
+                profileHTTP:
+                  bigip: /Common/http
+                virtualPort: 0
+                iRules:
+                - /f5vnf/Shared/lbSelectedRule
+                - /f5vnf/Shared/cpu_killer
+                translateServerPort: false
+                profileL4:
+                  use: /f5vnf/Shared/profileL4
+                virtualAddresses:
+                - use: /f5vnf/Shared/serviceAddress
+                snat: none
+                lastHop: disable
+                policyFirewallEnforced:
+                  use: /f5vnf/Shared/fwPolicy
+                securityLogProfiles:
+                  - use: /f5vnf/Shared/fwSecurityLogProfile
+                class: Service_HTTP
+            f5_inbound:
               class: Application
               template: generic
               serviceMain:
@@ -212,8 +219,8 @@ AS3 payload for configuration of Firewall rules
                 profileL4:
                   use: /f5vnf/Shared/profileL4
                 snat: none
-                translateServerAddress: false
-                translateServerPort: false
+                translateServerAddress: False
+                translateServerPort: False
                 virtualAddresses:
                 - use: /f5vnf/Shared/serviceAddress
                 virtualPort: 0
