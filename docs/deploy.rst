@@ -177,7 +177,7 @@ cm_ip: :menuselection:`Horizon UI: Project -> Compute -> Instances -> vnfmanager
 floating_network_id: :menuselection:`Horizon UI: Project -> Networks -> Network -> extnet`
 
 
-2.	Save the .yaml file. You will upload this file into VNFM in the next step, deploy F5 Gilan blueprint_.
+2.	Save the .yaml file. You will upload this file into VNFM in the next step, deploy F5 Gilan blueprint.
 
 
 
