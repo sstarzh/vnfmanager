@@ -36,11 +36,16 @@ Step 2. Watch BIG-IP and Nagios statistics, scaleout process in VNF manager
 
     .. image:: images/nagios.png
 
-4. 
+4. Look at the stats etc
        
 
 .. |menuIcon_use| image:: images/menuIcon.png
 
+5. Stop the traffic using the following script:
+
+    .. code-block:: console
+
+        ./stop_traffic.sh
 
 
 What’s Next?

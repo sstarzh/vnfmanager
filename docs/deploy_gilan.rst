@@ -17,19 +17,19 @@ define all required parameters for the F5 Gilan yaml blueprint.
 
 2.  Click :guilabel:`Deploy`.
 
-3.	Enter a name, under :guilabel:`Deployment Inputs`, click |clip_deploy| browse for the :guilabel:`gi_inputs.yaml` file you edited, and then click :guilabel:`Open`. The Deploy blueprint form is completed automatically with the values you entered in the gilan_inputs.yaml file. Click :guilabel:`Deploy`
+3.	Enter a name, under :guilabel:`Deployment Inputs`, click |clip_deploy| browse for the :guilabel:`inputs_gilan_udf-v3.yaml` file you edited, and then click :guilabel:`Open`. The Deploy blueprint form is completed automatically with the values you entered in the gilan_inputs.yaml file. Click :guilabel:`Deploy`
+
+.. warning:: Deployment name should be a single word with no spaces, dashes or special characters
 
 4.  On the left-side menu click the :guilabel:`Deployments` blade, in the list next to blueprint you created in the preivous step, expand |menuIcon_deploy|, click :guilabel:`Gilan install`, and then click :guilabel:`Execute`. VNFM starts creating BIG-IP VEs according to the parameters you defined for your network. Also installed includes additional, sub-blueprints packaged with the F5 gilan blueprint.
 
 .. image:: images/gilan_install2.png
 
-6.	Once your blueprint install finishes executing, to view a model of your VNF installation, on the :guilabel:`Deployments` blade, click a **name** from the list. A model of your VNF topology appears, along with a list of all the nodes, and event logs.
+5.	To view the list of Gilan workflows (for example, scale out group, deregister VE, etc.) that you can run, on the :guilabel:`Deployments` blade, click |menuIcon_deploy| next to your Gilan deployment in the list. A list of applicable workflows for your solution appears. Learn more about |workflows|
 
-7.	To view the list of Gilan workflows (for example, scale out group, deregister VE, etc.) that you can run, on the :guilabel:`Deployments` blade, click |menuIcon_deploy| next to your Gilan deployment in the list. A list of applicable workflows for your solution appears. Learn more about :ref:`workflows <workflows>`.
+.. image:: images/run_wf2.png UPDATE THIS
 
-.. image:: images/run_wf.png
-
-8.	To view the multiple BIP-IP VEs created by installing your F5 Gilan blueprint, open your OpenStack project and navigate to :menuselection:`Compute -> Instances`.
+6.	To view the multiple BIP-IP VEs created by installing your F5 Gilan blueprint, open your OpenStack project and navigate to :menuselection:`Compute -> Instances`.
 
 .. image:: images/os_instances.png
 
@@ -194,6 +194,10 @@ Step 3. Run test traffic to validate connectivity
 .. |conf| raw:: html
 
     <a href="https://docs.openstack.org/horizon/latest/user/launch-instances.html" target="_blank">Configuration</a>
+
+.. |workflows| raw:: html
+
+    <a href="https://clouddocs.f5.com/cloud/nfv/latest/use.html#run-workflows" target="_blank">Run Workflows</a>
 
 
 What’s Next?

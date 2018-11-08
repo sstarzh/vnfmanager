@@ -18,24 +18,31 @@ F5 VNFM Solutions
 
 F5 offers the following VNFM solutions with built-in services. This lab uses Gi LAN Solution Blueprint
 
-+------------------------+------------------------------------------------------------------------------------------------------------------+
-| Solution               | Description                                                                                                      |
-+========================+==================================================================================================================+
-| Gi LAN                 | VNFM plus F5 blueprints and plugins enabling you to automatically deploy all the necessary pieces                |
-|                        | to create a highly-available set of services, deployed in service layers. These layers auto-scale                |
-|                        | virtual machines and services to provide a complete and fully configured lifecycle management workflow:          |
-|                        |                                                                                                                  |
-|                        | 1.  Install (push button)                                                                                        |
-|                        | 2.  Auto-Scale (out and in)                                                                                      |
-|                        | 3.  Auto-Heal (with quarantine of instances for troubleshooting)                                                 |
-|                        | 4.  Update (push button)                                                                                         |
-|                        | 5.  Upgrade (push button)                                                                                        |
-|                        | 6.  Delete (push button)                                                                                         |
-|                        |                                                                                                                  |
-+------------------------+------------------------------------------------------------------------------------------------------------------+
-| Gi Firewall            | VNFM plus F5 blueprints and plugins enabling you to utilize firewall protection services only like,              |
-|                        | DDoS mitigation, DNS security, and intrusion protection.                                                         |
-+------------------------+------------------------------------------------------------------------------------------------------------------+
++------------------------+-------------------------------------------------------------------------------------------------------------------+
+| Solution               | Description                                                                                                       |
++========================+===================================================================================================================+
+| Gi LAN                 | VNFM is comprised of an F5 blueprint with specific parameters plus a Gi LAN inputs YAML file that defines those   |
+|                        | parameters with your system requirements. These components use plugins, enabling you to automatically deploy all  |
+|                        | the necessary pieces to create a highly-available set of services, deployed in service layers. These layers       |
+|                        | auto-scale virtual machines and services to provide a complete and fully configured lifecycle management workflow:|
+|                        |                                                                                                                   |
+|                        | 1.  Install (push button)                                                                                         |
+|                        | 2.  Auto-Scale (out and in)                                                                                       |
+|                        | 3.  Auto-Heal (with quarantine of instances for troubleshooting)                                                  |
+|                        | 4.  Update (push button)                                                                                          |
+|                        | 5.  Upgrade (push button)                                                                                         |
+|                        | 6.  Delete (push button)                                                                                          |
+|                        |                                                                                                                   |
++------------------------+-------------------------------------------------------------------------------------------------------------------+
+| Gi Firewall            | VNFM is comprised of an F5 blueprint with specific parameters plus this solution also uses the same Gi LAN inputs |
+|                        | YAML file as the previous solution, which defines those parameters with your system requirements. These           |
+|                        | components use plugins enabling you to utilize firewall protection services only like, DDoS mitigation, DNS       |
+|                        | security, and intrusion protection                                                                                |
++------------------------+-------------------------------------------------------------------------------------------------------------------+
+| VNFM Base              | VNFM is comprised of a base F5 blueprint and a base inputs YAML file, lacking monitoring and resource collecting  |
+|                        | parameters, plus a VNFM Base inputs file that defines those base parameters with your system requirements.        |
++--------------------------------------------------------------------------------------------------------------------------------------------+
+
 
 F5 blueprint
 ------------
@@ -109,18 +116,6 @@ for example:
 -  **Plugins**-—communicate with external services, such as: cloud services like OpenStack, container-management systems like
    Kubernetes, configuration management tools like Ansible, and other communication protocols like HTTP and SSH.
 
-The F5 blueprints and orchestration include the following components:
-
-+------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| Component              | Description                                                                                                                |
-+========================+============================================================================================================================+
-| Gilan_Inputs file      | Defines the relationship for all nodes in your Gi-LAN network, enabling you to rapidly deploy/teardown                     |
-|                        | BIG-IP VE virtual machines and services on demand, as needed. This blueprint provides workflows and                        |
-|                        | one-step options.                                                                                                          |
-+------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| Inputs YAML file       | A file you configure to define your deployment parameters.                                                                 |
-| Gi_inputs.yaml         |                                                                                                                            |
-+------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 What’s Next?
 

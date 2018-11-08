@@ -1,9 +1,9 @@
 Part VI. Configuration change
 =============================
 
-1. ref:`Check existing FW config<existing>`
-2. ref:`Configuration change workflow<as3_change>`
-3. ref:`Check VNF BIG-IP config <as3_check>`
+1. :ref:`Check existing FW config<existing>`
+2. :ref:`Configuration change workflow<as3_change>`
+3. :ref:`Check VNF BIG-IP config <as3_check>`
 
 
 VNF Manager allows users to perform BIG-IP configuration change by invoking `nsd_xxx` Workflow and passing corresponding AS3 payload.
@@ -13,8 +13,11 @@ This lab contains a modified AS3 payload that will provision AFM policy and rule
 .. _existing:
 
 
-1. Check VNF BIG-IP FW rules and configuration
+1. Check VNF BIG-IP FW rules and configuration. There should be no policy or rules configured
 
+:guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules`
+
+.. image:: images/after_as3.png FIX THIS
 
 
 .. _as3_change:
@@ -241,9 +244,15 @@ AS3 payload for configuration of Firewall rules
 
 .. _as3_check:
 
-2. Check VNF BIG-IP configuration
+3. Check VNF BIG-IP configuration
+:guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules`
+
+.. image:: images/after_as3.png FIX THIS
 
 
+4. Run test traffic through Gilan to ensure Firewall configuration doesn't block the flow.
+
+:doc:`Run test traffic <test>`
 
 
 What’s Next?

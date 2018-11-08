@@ -33,7 +33,7 @@ Step 2. Modify openstack route
     Add the following route: 
     `10.1.52.101/32` Next Hop `<DAG layer BIG-IP pgw_net IP>`
 
-    .. image:: images/static.png
+    .. image:: images/static2.png
 
 .. _test_dag:
 
