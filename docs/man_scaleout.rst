@@ -31,7 +31,7 @@ Step 2. Modify openstack route
     Open :guilabel:`Static Routes` tab and click on :guilabel:`Delete Static Route` to delete previously provisioned route.
     Click on :guilabel:`Add Static Route`
     Add the following route: 
-    `<Server VM IP>/32` Next Hop `<DAG layer BIG-IP pgw_net IP>`
+    `10.1.52.101/32` Next Hop `<DAG layer BIG-IP pgw_net IP>`
 
     .. image:: images/static.png
 
@@ -44,7 +44,7 @@ Step 3. Run test traffic
 
 .. code_block:: console
 
-    ./run_traffic.sh 10.1.52.X
+    ./run_traffic.sh 10.1.52.101
 
 2. Point Jumphost Browser to new DAG BIG-IP instance .40 IP address and login to BIG-IP TMUI
 3. Navigate to :guilabel:`Local Traffic` --> :guilabel:`Virtual Servers`, then select `f5vnf` partition from :guilabel:`Partition:` menu

@@ -2,7 +2,7 @@ Part IV. Trigger auto scale-out
 ===============================
 
 1. :ref:`Run Apache Bench <traffic_run>`
-2. :ref:`Watch BIG-IP statistics and VNF manager actions <watch>`
+2. :ref:`Watch BIG-IP and Nagios statistics, VNF manager actions <watch>`
 
 
 .. _traffic_run:
@@ -21,8 +21,8 @@ Step 1. Run Apache Bench from traffic_gen VM
 
 .. _watch:
 
-Step 2. Watch BIG-IP statistics and scaleout process in VNF manager
--------------------------------------------------------------------
+Step 2. Watch BIG-IP and Nagios statistics, scaleout process in VNF manager
+---------------------------------------------------------------------------
 
 
 1. Point Jumphost Browser to a `master` VNF(FW) BIG-IP instance .40 IP address and login to BIG-IP TMUI
@@ -32,7 +32,7 @@ Step 2. Watch BIG-IP statistics and scaleout process in VNF manager
     a. Login to VNF manager UI and click on :guilabel:`Deployments` from the left-side menuIcon
     b. Watch as VNF manager performs auto scale-out of VNF(FW) instances
 3. Open a new tab in the browser and point it to the public floating `10.1.20.x` IP address of Nagios VM. Login using Nagios credentials and navigate to :menuselection:`Services` 
-See :ref:`Credentials <credentials>`
+    See :ref:`Credentials <credentials>`
 
     .. image:: images/nagios.png
 
