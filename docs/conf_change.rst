@@ -1,9 +1,9 @@
 Part VI. Configuration change
 =============================
 
-1. :ref:`Check existing FW config<existing>`
-2. :ref:`Configuration change workflow<as3_change>`
-3. :ref:`Check VNF BIG-IP config <as3_check>`
+1. :ref:`Check existing FW config <existing>`
+2. :ref:`Configuration change workflow <as3_change>`
+3. :ref:`Check VNF BIG-IP config and run test traffic <as3_check>`
 
 
 VNF Manager allows users to perform BIG-IP configuration change by invoking `nsd_xxx` Workflow and passing corresponding AS3 payload.
