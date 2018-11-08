@@ -1,6 +1,9 @@
 VNF manager Workflows
 =====================
 
+
+.. _matrix:
+
 VNF manager Workflow-deployment matrix: |matrix|
 
 
@@ -10,7 +13,8 @@ VNF manager Workflow-deployment matrix: |matrix|
    :caption: List of workflows supported by VNF manager
    :glob:
    :maxdepth: 2
-
+   
+   |matrix|
    CM-install-wf.rst
    CM-scale-wf.rst
    CM-heal-wf.rst
