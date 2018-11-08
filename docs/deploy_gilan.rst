@@ -74,6 +74,8 @@ Run the following script:
 
 2. Verify traffic_server VM is in Running state and has correct IP assigned
 
+:menuselection:`Project -> Compute -> Instances`
+
 .. image:: images/traffic_server_vm.png
 
 
