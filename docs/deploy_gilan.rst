@@ -81,7 +81,7 @@ Run the following script:
 
     .. note:: This lab uses pdn_dag_net to return traffic from server to DAG2 instance. This is due to various environment limitations
     
-    .. image:: images/networking.png
+    .. image:: images/networking2.png
 
     Three-way TCP handshake flow:
 
