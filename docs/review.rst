@@ -94,16 +94,15 @@ The private cloud environment (for example, OpenStack) must have the following a
 ============================================================ =============================================================================================================================================================================
 Component                                                    Description
 ============================================================ =============================================================================================================================================================================
-|flavors_setup| (Admin->Flavors)                             Define flavors sized to accommodate the VNFM component images you previously uploaded. The minimum flavor requirements for deploying the F5 VNF Manager include:
+|flavors_setup| (Admin->Flavors)                             Defined flavors sized to accommodate the VNFM component images. BIG-IP VEs use m1.large flavor:
 
                                                              -  vCPU: 4
                                                              -  RAM: 8GB
                                                              -  Root disk: 160GB
 
-|networks_setup| (Project->Network)                          Define the following networks and one subnet for each, defined with sufficient IP address space in each network:
-                                                             For example, a 5Gb or 10Gb network requires a minimum of [insert #] IP addresses for each subnet.
+|networks_setup| (Project->Network)                          The following networks and one subnet for each, defined with sufficient IP address space in each network have been created:
 
-                                                             -  Management network (mgmt) – Configure the VNF Manager and BIG-IP VE management interfaces on this network, specifying at least one DNS server in the subnet configuration.
+                                                             -  Management network (mgmt) – VNF Manager and BIG-IP VE management interfaces are on this network.
                                                              -  Provider gateway network (pgw_net) – Network used for the internal-facing DAG data plane interfaces.
                                                              -  Provider data network (pdn_net) – Network used for the external-facing DAG data plane interfaces.
                                                              -  DAG to provider gateway network (pgw_dag_net) – Network used for the internal-facing VNF data plane interfaces.
