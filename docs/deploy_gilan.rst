@@ -87,12 +87,17 @@ Run the following script:
 
     Three-way TCP handshake flow:
 
-    .. image:: images/tcp_3_way.png
+    .. image:: images/tcp_3_way2.png
 
     Apache Bench HTTP request flow:
 
-    .. image:: images/ab_flow.png
+    .. image:: images/ab_flow2.png
     
+    .. note:: For load testing VNF BIG-IP uses a special "CPU killer" iRule which generates a 200 OK answer locally without forwarding traffic to the server
+    
+    Apache Bench Load test flow:
+
+    .. image:: images/ab_load.png
 
 .. _test:
 
