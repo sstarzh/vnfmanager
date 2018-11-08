@@ -17,3 +17,5 @@ Expand |menuIcon_deploy|, click :guilabel:`Gilan uninstall` and then click :guil
 
 For more information about Uninstall Workflow see:
 :doc:`Uninstall Workflow <CM-uninstall-wf>`
+
+**This concludes ISC 2018 VNF manager lab**
