@@ -41,7 +41,8 @@ F5 offers the following VNFM solutions with built-in services. This lab uses Gi 
 +------------------------+-------------------------------------------------------------------------------------------------------------------+
 | VNFM Base              | VNFM is comprised of a base F5 blueprint and a base inputs YAML file, lacking monitoring and resource collecting  |
 |                        | parameters, plus a VNFM Base inputs file that defines those base parameters with your system requirements.        |
-+========================+===================================================================================================================+
+|                        |                                                                                                                   |
++------------------------+-------------------------------------------------------------------------------------------------------------------+
 
 
 F5 blueprint
