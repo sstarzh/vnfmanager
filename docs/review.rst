@@ -73,7 +73,7 @@ Start UDF environment
 .. note:: Script performs the following: 
     Creates extnet Openstack network and 2 Routers with corresponding interfaces; starts rabbitmq-server on controller node; forces Nova service to register compute nodes with new hostnames and creates necessary routes on jumphost and BIG-IQ VMs
 
-5. **Point Firefox browser to Openstack Horizon Dashboard at `http://10.1.20.4/`**
+5. **Point Firefox browser to Openstack Horizon Dashboard at http://10.1.20.4/ **
 
 .. image:: images/controller.png
 
