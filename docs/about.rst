@@ -1,6 +1,8 @@
 About F5 Virtual Network Function Manager (VNFM)
 ================================================
 
+Customer-facing documentation can be found here: |vnfm_clouddocs|
+
 F5 utilizes a third-party orchestration framework to bring you the F5 Virtual Network Function Manager (VNFM).
 This cloud orchestration tool uses |OASIS_about| blueprints and plugins to manage the processing resources between your packet gateway and the Internet (Gi-LAN), in a private cloud environment (such as, OpenStack), auto-scaling your
 BIG-IP VE virtual machines, during high-volume periods. VNFM relies on BIG-IQ 6.0.1 and BIG-IP 13.1.1 images to provide services such as, scaling services and resources,
@@ -24,6 +26,10 @@ Processes like, your policy engines, your subscriber service-charging functions,
 What's Next?
 
 :doc:`Review and Prepare UDF Blueprint <review>`
+
+.. |vnfm_clouddocs| raw:: html
+
+    <a href="https://clouddocs.f5.com/cloud/nfv/latest/vnfm_index.html" target="_blank">F5 VNF Manager</a>
 
 
 .. |OASIS_about| raw:: html
