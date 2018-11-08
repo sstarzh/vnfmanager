@@ -35,11 +35,11 @@ Check VNF BIG-IP FW rules and configuration. There should be no policy or rules 
 Step 2. Apply updated AS3 configuration
 ---------------------------------------
 
-2. To change the AFM configuration, open `as3_update.yaml` on jumphost Desktop and copy it's contents
+1. To change the AFM configuration, open `as3_update.yaml` on jumphost Desktop and copy it's contents
 
-select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
+2. select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
 
-Expand |menuIcon_deploy|, click :guilabel:`Gilan update as3 nsd`, paste the entire AS3 payload copied from the file, and then click :guilabel:`Execute`.
+3. Expand |menuIcon_deploy|, click :guilabel:`Gilan update as3 nsd`, paste the entire AS3 payload copied from the file, and then click :guilabel:`Execute`.
 
 .. |menuIcon_deploy| image:: images/menuIcon.png
 
@@ -260,13 +260,17 @@ AS3 payload for configuration of Firewall rules
 
 .. _as3_check:
 
-3. Check VNF BIG-IP configuration
+
+Step 3. Validate configuration change
+-------------------------------------
+
+1. Check VNF BIG-IP configuration
 :guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules`
 
 .. image:: images/after_as3.png FIX THIS
 
 
-4. Run test traffic through Gilan to ensure Firewall configuration doesn't block the flow.
+2. Run test traffic through Gilan to ensure Firewall configuration doesn't block the flow.
 
 :doc:`Run test traffic <test>`
 
