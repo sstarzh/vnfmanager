@@ -272,7 +272,7 @@ Step 3. Validate configuration change
 
 2. Run test traffic through Gilan to ensure Firewall configuration doesn't block the flow.
 
-:doc:`Run test traffic <test>`
+:ref:`Run test traffic <test>`
 
 
 What’s Next?
