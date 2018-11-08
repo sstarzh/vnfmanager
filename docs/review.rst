@@ -130,7 +130,9 @@ Component                                                    Description
 Verify BIG-IQ route
 -------------------
 
-SSH to BIG-IQ and confirm that route to 10.1.40.0/24 network is present and network is reachable. Gateway IP is unique for each deployment and depends on Openstack Router interface extnet IP
+Open UDF Web Shell to BIG-IQ and confirm that route to 10.1.40.0/24 network is present and network is reachable. Gateway IP is unique for each deployment and depends on Openstack Router interface extnet IP
+
+.. image:: images/biqiq_websh.png
 
 .. code-block:: console
     
@@ -149,6 +151,8 @@ SSH to BIG-IQ and confirm that route to 10.1.40.0/24 network is present and netw
     --- 10.1.40.1 ping statistics ---
     4 packets transmitted, 4 received, 0% packet loss, time 3558ms
     rtt min/avg/max/mdev = 3.056/4.359/7.180/1.644 ms
+
+.. note:: If BIG-IQ doesn't show a valid route into .40 subnet, run the "run_this_first.sh" script again and seek assistance before proceeding further
 
 What's Next?
 
