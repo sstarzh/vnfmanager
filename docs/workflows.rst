@@ -14,7 +14,6 @@ VNF manager Workflow-deployment matrix: |matrix|
    :glob:
    :maxdepth: 2
    
-   |matrix|
    CM-install-wf.rst
    CM-scale-wf.rst
    CM-heal-wf.rst

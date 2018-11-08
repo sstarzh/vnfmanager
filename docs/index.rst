@@ -25,6 +25,7 @@ F5 Virtual Network Function Manager (VNFM)
    :glob:
    :maxdepth: 2
 
+   :ref:`Workflow-deployment matrix <matrix>`
    workflows.rst
    CM-UseSecrets.rst
    gi-inputs.rst
