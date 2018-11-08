@@ -37,7 +37,7 @@ Step 2. Apply updated AS3 configuration
 
 1. To change the AFM configuration, open `as3_update.yaml` on jumphost Desktop and copy it's contents
 
-2. select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
+2. Select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
 
 3. Expand |menuIcon_deploy|, click :guilabel:`Gilan update as3 nsd`, paste the entire AS3 payload copied from the file, and then click :guilabel:`Execute`.
 
