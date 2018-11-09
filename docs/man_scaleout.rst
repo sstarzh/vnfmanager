@@ -50,12 +50,12 @@ Step 3. Run test traffic
 3. Navigate to :guilabel:`Local Traffic` --> :guilabel:`Virtual Servers`, then select `f5vnf` partition from :guilabel:`Partition:` menu
 4. Select `firewall_fastL4` VS and click on :guilabel:`Statistics` menu
 
-    Traffic statistics will be visible in `Traffic Details` and `Connections` parts of Statistics screen. Note that due to the asymmetric routing return traffic is NOT passing through DAG instances!
+    Traffic statistics will be visible in `Traffic Details` and `Connections` parts of Statistics screen. Note that due to the asymmetric routing return traffic is NOT passing through the same DAG instance
 
 
 .. image:: images/module_stats.png
 
-.. note:: Other methods may be used to validate that the traffic is flowing through new DAG instances including running a tcpdump Execute
+.. note:: Other methods may be used to validate that the traffic is flowing through new DAG instances including running a tcpdump
 
 
 
