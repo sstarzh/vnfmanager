@@ -120,9 +120,7 @@ Step 4: Manage secrets
 
 In F5 VNFM UI, click :menuselection:`System Resources -> Secret Store Management`, click |edit_deploy| next to each of the
 following secrets to edit the values for your project. Doing so enables your blueprint to access these values as needed,
-during orchestration, without exposing the plain text values:
-
-:menuselection:`System Resources -> Secret Store Management`
+during orchestration, without exposing the plain text values.
 
 1. Change the following credentials:
 
