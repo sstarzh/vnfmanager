@@ -35,7 +35,7 @@ define all required parameters for the F5 Gilan yaml blueprint.
 
 .. |menuIcon_deploy| image:: images/menuIcon.png
 
-.. note:: Deployment will take 35-45 minutes to complete. Monitor the process by viewing :guilabel:`Deployments` screen until all nodes are **green**
+.. note:: Deployment will take 40-45 minutes to complete. Monitor the process by viewing :guilabel:`Deployments` screen until all nodes are **green**
 
 Resulting Gilan deployment architecture includes 2 DAG and 2 ( master + 1 slave) VNF instances:
 
