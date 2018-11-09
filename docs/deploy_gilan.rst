@@ -13,7 +13,7 @@ Step 1. Deploy Gilan blueprint
 Once you change all the values in the Gi LAN inputs file and save it locally, upload the file in F5 VNF Manager. It will
 define all required parameters for the F5 Gilan yaml blueprint.
 
-1.	Open F5 VNFM, click :guilabel:`Local Blueprints`. The :guilabel:`F5-VNF-Service-Layer-GiLAN_1.0.0` main blueprint file appears.
+1.	Open F5 VNFM, click :guilabel:`Local Blueprints`. The :guilabel:`F5-VNF-Service-Layer-GiLAN_1.0.0.1` main blueprint file appears.
 
 2.  Click :guilabel:`Deploy`.
 
@@ -23,11 +23,11 @@ define all required parameters for the F5 Gilan yaml blueprint.
 
 4.  On the left-side menu click the :guilabel:`Deployments` blade, in the list next to blueprint you created in the preivous step, expand |menuIcon_deploy|, click :guilabel:`Gilan install`, and then click :guilabel:`Execute`. VNFM starts creating BIG-IP VEs according to the parameters you defined for your network. Also installed includes additional, sub-blueprints packaged with the F5 gilan blueprint.
 
-.. image:: images/gilan_install2.png
+.. image:: images/gilan_install3.png
 
 5.	To view the list of Gilan workflows (for example, scale out group, deregister VE, etc.) that you can run, on the :guilabel:`Deployments` blade, click |menuIcon_deploy| next to your Gilan deployment in the list. A list of applicable workflows for your solution appears. Learn more about |workflows|
 
-.. image:: images/run_wf2.png UPDATE THIS
+.. image:: images/run_wf3.png
 
 6.	To view the multiple BIP-IP VEs created by installing your F5 Gilan blueprint, open your OpenStack project and navigate to :menuselection:`Compute -> Instances`.
 
@@ -41,7 +41,7 @@ Resulting Gilan deployment architecture includes 2 DAG and 2 ( master + 1 slave)
 
 .. image:: images/arch_depl2.png
 
-.. image:: images/wf_complete.png
+.. image:: images/wf_complete3.png
 
 .. |clip_deploy| image:: images/clip.png
 
