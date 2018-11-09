@@ -118,7 +118,7 @@ To acces your VNFM, point your browser to the public floating `10.1.20.x` IP add
 Step 4: Manage secrets
 ------------------------------------------
 
-In F5 VNFM UI, click :menuselection:`System Settings -> Secret Store Management`, click |edit_deploy| next to each of the
+In F5 VNFM UI, click :menuselection:`System Resources -> Secret Store Management`, click |edit_deploy| next to each of the
 following secrets to edit the values for your project. Doing so enables your blueprint to access these values as needed,
 during orchestration, without exposing the plain text values:
 
