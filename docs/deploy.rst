@@ -95,7 +95,7 @@ Component                                                    Description
 Step 2: Add a floating IP
 -------------------------------------------
 
-Once you launch your instance in OpenStack, expand the :guilabel:`Creat Snapshot` drop-down next to your instance in the table, and select |FlIPAd_deploy| from the list. Choose an IP address from the list. If none, click :guilabel:`+` to add one.
+Once you launch your instance in OpenStack, expand the :guilabel:`Create Snapshot` drop-down next to your instance in the table, and select |FlIPAd_deploy| from the list. Choose an IP address from the list. If none, click :guilabel:`+` to add one.
 This allocates the floating `extnet` IP on the management network. Do this to access the VNFM externally from a browser, using https.
 
 
