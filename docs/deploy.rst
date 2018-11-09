@@ -33,7 +33,7 @@ Component                                                    Description
                                                              
                                                              .. image:: images/novol3.png
 
-|flavors_deploy|                                             Select m1.medium flavor
+|flavors_deploy|                                             Select :guilabel:`m1.medium` flavor
 
 |networks_deploy|                                            Select :guilabel:`+` next to the following predefined network (and subnet), to add to the :guilabel:`Allocated` list:
 
