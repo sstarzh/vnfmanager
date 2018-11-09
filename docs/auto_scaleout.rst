@@ -34,7 +34,7 @@ Step 2. Watch BIG-IP and Nagios statistics, scaleout process in VNF manager
 
     .. image:: images/nagios.png
 
-Nagios will show a **CRITICAL** alarm when CPU utilization on VNF layer BIG-IPs reaches pre-defined threshold:
+After 2-3 minutes Nagios will show a **CRITICAL** alarm when CPU utilization on VNF layer BIG-IPs reaches pre-defined threshold:
 
     .. image:: images/alarm.png
 
