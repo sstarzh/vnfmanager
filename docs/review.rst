@@ -94,10 +94,10 @@ The private cloud environment (for example, OpenStack) must have the following a
 ============================================================ =============================================================================================================================================================================
 Component                                                    Description
 ============================================================ =============================================================================================================================================================================
-|flavors_setup| (Admin->Flavors)                             Defined flavors sized to accommodate the VNFM component images. BIG-IP VEs use m1.large flavor:
+|flavors_setup| (Admin->Flavors)                             Defined flavors sized to accommodate the VNFM component images. BIG-IP VEs use m1.medium flavor:
 
-                                                             -  vCPU: 4
-                                                             -  RAM: 8GB
+                                                             -  vCPU: 2
+                                                             -  RAM: 4GB
                                                              -  Root disk: 160GB
 
 |networks_setup| (Project->Network)                          The following networks and one subnet for each, defined with sufficient IP address space in each network have been created:
