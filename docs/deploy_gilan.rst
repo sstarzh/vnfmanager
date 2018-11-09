@@ -26,6 +26,7 @@ define all required parameters for the F5 Gilan yaml blueprint.
 .. image:: images/gilan_install3.png
 
 .. note:: You may see the following error appearing intermittently during the first few minutes of deployment. It doesn't affect the deployment process
+    
     .. image:: images/error.png
 
 5.	To view the list of Gilan workflows (for example, scale out group, deregister VE, etc.) that you can run, on the :guilabel:`Deployments` blade, click |menuIcon_deploy| next to your Gilan deployment in the list. A list of applicable workflows for your solution appears. Learn more about |workflows|
