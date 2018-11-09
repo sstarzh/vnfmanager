@@ -6,7 +6,7 @@ This step will force VNF Manager to remove all BIG-IP and Nagios VMs and corresp
 .. note:: It is recommended to skip this step if current UDF deployment will be used later for customer PoCs and/or demos
 
 
-To uninstall the entire deployment, select :guilabel:`Deployments` --> :guilabel:`F5-VNF-Service-Layer-GiLAN_1.0.0` Blueprint 
+To uninstall the entire deployment, select :guilabel:`Deployments` --> :guilabel:`F5-VNF-Service-Layer-GiLAN_1.0.0.1` Blueprint 
 Expand |menuIcon_deploy|, click :guilabel:`Gilan uninstall` and then click :guilabel:`Execute`.
 
 .. image:: images/gilan_uninstall2.png FIX THIS
