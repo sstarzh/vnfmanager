@@ -27,7 +27,7 @@ Step 2. Watch BIG-IP and Nagios statistics, scaleout process in VNF manager
 
 1. Point Jumphost Browser to a `master` VNF(FW) BIG-IP instance .40 IP address and login to BIG-IP TMUI
     a. Navigate to :guilabel:`Statistics` --> :guilabel:`Analytics` --> :guilabel:`CPU`
-    b. Watch CPU graph as it crosses 15% CPU threshold
+    b. Watch CPU graph as it crosses pre-defined 40% CPU threshold
 
 2. Open a new tab in the browser and point it to the public floating `https://10.1.20.x/nagios` IP address of Nagios VM. Login using Nagios credentials and navigate to :menuselection:`Services` 
     See :ref:`Credentials <credentials>`
