@@ -40,17 +40,18 @@ Step 2. Modify openstack route
 Step 3. Run test traffic
 ------------------------
 
-1. SSH to `traffic_gen` VM and run `run_traffic.sh` sript passing Server IP as an argument:
+1. Run test traffic through new DAG instance
 
-.. code_block:: console
+:ref:`Run test traffic <test>`
 
-    ./run_traffic.sh 10.1.52.101
+.. note:: This test is the same as in Part III Step 3 of this lab guide
+
 
 2. Point Jumphost Browser to new DAG BIG-IP instance .40 IP address and login to BIG-IP TMUI
 3. Navigate to :guilabel:`Local Traffic` --> :guilabel:`Virtual Servers`, then select `f5vnf` partition from :guilabel:`Partition:` menu
 4. Select `firewall_fastL4` VS and click on :guilabel:`Statistics` menu
 
-    Traffic statistics will be visible in `Traffic Details` and `Connections` parts of Statistics screen. Note that due to the asymmetric routing return traffic is NOT passing through the same DAG instance
+    Traffic statistics will be visible in `Traffic Details` and `Connections` parts of Statistics screen. Note that due to the asymmetric routing, return traffic is NOT passing through the same DAG instance
 
 
 .. image:: images/module_stats.png
