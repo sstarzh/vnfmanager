@@ -131,7 +131,7 @@ Verify BIG-IQ route
 
 Open UDF :guilabel:`Console` or :guilabel:`SSH(47010)` to BIG-IQ and confirm that route to 10.1.40.0/24 network is present and network is reachable. Gateway IP is unique for each deployment and depends on Openstack Router interface extnet IP
 
-.. image:: images/biqiq_websh.png
+.. image:: images/biqiq_websh2.png
 
 .. code-block:: console
     
