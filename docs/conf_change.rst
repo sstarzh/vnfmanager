@@ -35,7 +35,7 @@ Check VNF BIG-IP FW rules and configuration. There should be no policy or rules 
 Step 2. Apply updated AS3 configuration
 ---------------------------------------
 
-1. To change the AFM configuration, open `as3_update.json` on jumphost Desktop and copy it's contents
+1. To change the AFM configuration, open **as3_update.json** on jumphost Desktop and copy it's contents
 
 2. Select :guilabel:`Deployments` --> :guilabel:`nsd_vnf_xxxx` Blueprint 
 
