@@ -31,7 +31,7 @@ Step 2. Watch BIG-IP and Nagios statistics, scaleout process in VNF manager
 2. Point your browser to the public floating `10.1.20.x` IP address of VNF Manager VM
     a. Login to VNF manager UI and click on :guilabel:`Deployments` from the left-side menuIcon
     b. Watch as VNF manager performs auto scale-out of VNF(FW) instances
-3. Open a new tab in the browser and point it to the public floating `10.1.20.x` IP address of Nagios VM. Login using Nagios credentials and navigate to :menuselection:`Services` 
+3. Open a new tab in the browser and point it to the public floating `https://10.1.20.x/nagios` IP address of Nagios VM. Login using Nagios credentials and navigate to :menuselection:`Services` 
     See :ref:`Credentials <credentials>`
 
     .. image:: images/nagios.png
