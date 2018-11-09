@@ -31,7 +31,7 @@ Component                                                    Description
 ============================================================ ======================================================================================================================================================================================================================================================================
 |source_deploy|                                              Expand :guilabel:`Select Boot Source`, and choose :guilabel:`Image`, under :guilabel:`Create New Volume`, click :guilabel:`No`, and then click :guilabel:`+` next to the latest VNFM image file to move it to the :guilabel:`Allocated` list.
                                                              
-                                                             .. image:: images/novol3.png FIX THIS
+                                                             .. image:: images/novol3.png
 
 |flavors_deploy|                                             Select m1.large flavor
 
