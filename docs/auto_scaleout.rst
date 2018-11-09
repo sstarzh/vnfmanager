@@ -28,20 +28,30 @@ Step 2. Watch BIG-IP and Nagios statistics, scaleout process in VNF manager
 1. Point Jumphost Browser to a `master` VNF(FW) BIG-IP instance .40 IP address and login to BIG-IP TMUI
     a. Navigate to :guilabel:`Statistics` --> :guilabel:`Analytics` --> :guilabel:`CPU`
     b. Watch CPU graph as it crosses 15% CPU threshold
-2. Point your browser to the public floating `10.1.20.x` IP address of VNF Manager VM
-    a. Login to VNF manager UI and click on :guilabel:`Deployments` from the left-side menuIcon
-    b. Watch as VNF manager performs auto scale-out of VNF(FW) instances
-3. Open a new tab in the browser and point it to the public floating `https://10.1.20.x/nagios` IP address of Nagios VM. Login using Nagios credentials and navigate to :menuselection:`Services` 
+
+2. Open a new tab in the browser and point it to the public floating `https://10.1.20.x/nagios` IP address of Nagios VM. Login using Nagios credentials and navigate to :menuselection:`Services` 
     See :ref:`Credentials <credentials>`
 
     .. image:: images/nagios.png
 
-4. Look at the stats etc
+Nagios will show a **CRITICAL** alarm when CPU utilization on VNF layer BIG-IPs reaches pre-defined threshold:
+
+    .. image:: images/alarm.png
+
+    Clicking on the alarm brings up detailed state information
+
+    .. image:: images/alarm_det.png
        
+3. Point your browser to the public floating `10.1.20.x` IP address of VNF Manager VM
+    a. Login to VNF manager UI and click on :guilabel:`Deployments` from the left-side menuIcon
+    b. Watch as VNF manager performs auto scale-out of VNF(FW) instances:
+
+.. image:: images/auto_scaleout.png
+
 
 .. |menuIcon_use| image:: images/menuIcon.png
 
-5. Stop the traffic using the following script:
+4. Stop the traffic using the following script:
 
     .. code-block:: console
 
