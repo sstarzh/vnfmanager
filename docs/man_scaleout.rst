@@ -48,7 +48,7 @@ Step 3. Run test traffic
 
 
 2. Point Jumphost Browser to new DAG BIG-IP instance .40 IP address and login to BIG-IP TMUI
-3. Navigate to :guilabel:`Local Traffic` --> :guilabel:`Virtual Servers`, then select `f5vnf` partition from :guilabel:`Partition:` menu
+3. Navigate to :guilabel:`Local Traffic` --> :guilabel:`Virtual Servers`, then select `f5dag` partition from :guilabel:`Partition:` menu
 4. Select `firewall_fastL4` VS and click on :guilabel:`Statistics` menu
 
     Traffic statistics will be visible in `Traffic Details` and `Connections` parts of Statistics screen. Note that due to the asymmetric routing, return traffic is NOT passing through the same DAG instance

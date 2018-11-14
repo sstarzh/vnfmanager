@@ -110,7 +110,7 @@ Component                                                    Description
                                                              -  Control network (control_net) – Network fused or communication with control and value-added services.
                                                              -  HA network (ha_net) – Network used for internal HA communication between clustered VNF BIG-IP VE instances.
 
-|secGrps_setup| (Project->Access and Security)               The following security groups created:
+|secGrps_setup| (Project->Compute->Access and Security)      The following security groups created:
 
                                                              -  SNMP security group (snmp_sg) – Allow UDP ports 161/162.
                                                              -  Control security group (control_sg) – Configure as needed for your envronment.
@@ -118,7 +118,7 @@ Component                                                    Description
                                                              -  Provider data network security group (pdn_sg) – Configure as needed for your envronment.
                                                              -  Provider gateway security group (pgw_sg) – Configure as needed for your envronment.
 
-|keyPr_setup| (Project->Access and Security)                 Defined key pairs for accessing VNFM instance remotely, using SSH.
+|keyPr_setup| (Project->Compute->Access and Security)        Defined key pairs for accessing VNFM instance remotely, using SSH.
 
 |router_setup| (Project->Network->Routers)                   Created 2 routers with interfaces into VxLANs (router1 is connected to extnet)
 ============================================================ =============================================================================================================================================================================

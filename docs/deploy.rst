@@ -39,11 +39,9 @@ Component                                                    Description
 
                                                              -  :guilabel:`Management network (mgmt)` – The VNF Manager and BIG-IP VE management interfaces with one DNS server in the subnet configuration.
 
-|sg_deploy|                                                  Select :guilabel:`+` next to the following, predefined security group to add to the :guilabel:`Allocated` list:
+|sg_deploy|                                                  Ensure that :guilabel:`default` security group is selected 
 
-                                                             -  Select Default security group :guilabel:`default`
-
-|kp_deploy|                                                  Select existing `jumphost.pem` key pair for accessing VNFM instance remotely from jumphost, using SSH.
+|kp_deploy|                                                  Ensure that existing `jumphost.pem` key pair is selected for accessing VNFM instance remotely from jumphost, using SSH.
 ============================================================ ======================================================================================================================================================================================================================================================================
 
 2.	For all other Instance component definitions, use the default values provided by OpenStack. For details, see |OSLnchIn_deploy|.
@@ -95,7 +93,7 @@ Component                                                    Description
 Step 2: Add a floating IP
 -------------------------------------------
 
-Once you launch your instance in OpenStack, expand the :guilabel:`Create Snapshot` drop-down next to your instance in the table, and select |FlIPAd_deploy| from the list. Choose an IP address from the list. If none, click :guilabel:`+` to add one.
+Once you launch your instance in OpenStack, expand the :guilabel:`Create Snapshot` drop-down ( or press :guilabel:`Associate Floating IP` if instance is still spawning) next to your instance in the table, and select |FlIPAd_deploy| from the list. Choose an IP address from the list. If none, click :guilabel:`+` to add one.
 This allocates the floating `extnet` IP on the management network. Do this to access the VNFM externally from a browser, using https.
 
 

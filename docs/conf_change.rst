@@ -24,7 +24,7 @@ Check VNF BIG-IP FW rules and configuration. There should be no policy or rules 
 
 2. Point the browser to .40 IP of **Master** VNF BIG-IP and login as admin
 
-3. Navigate to :guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules` --> :guilabel:`Context: Virtual Server`
+3. In :guilabel:`f5vnf` partition navigate to :guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules` --> :guilabel:`Context: Virtual Server`
 
 .. image:: images/existing_as3_2.png
 
@@ -324,7 +324,7 @@ Step 3. Validate configuration change
 -------------------------------------
 
 1. Check VNF BIG-IP configuration
-:guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules` --> :guilabel:`Context: Virtual Server`
+In :guilabel:`f5vnf` partition navigate to :guilabel:`Security` --> :guilabel:`Network Firewall` --> :guilabel:`Active Rules` --> :guilabel:`Context: Virtual Server`
 
 .. image:: images/after_as3.png
 
